@@ -14,6 +14,7 @@ PODS:
   - Moya/RxSwift (11.0.2):
     - Moya/Core
     - RxSwift (~> 4.0)
+  - Ono (2.0.0)
   - Result (3.2.4)
   - RxCocoa (4.1.2):
     - RxSwift (~> 4.0)
@@ -39,6 +40,7 @@ DEPENDENCIES:
   - Kingfisher
   - MJRefresh
   - Moya/RxSwift
+  - Ono
   - RxCocoa
   - RxDataSources
   - RxSwift
@@ -59,6 +61,7 @@ SPEC REPOS:
     - Kingfisher
     - MJRefresh
     - Moya
+    - Ono
     - Result
     - RxCocoa
     - RxDataSources
@@ -79,6 +82,7 @@ SPEC CHECKSUMS:
   Kingfisher: 976d828df2b24834c6a3f2fc4d82cdbd26552be1
   MJRefresh: b48380ae2b927b46c4ef000de9adb8dc748e1df7
   Moya: a725035953bc1c0eb1be505ab903984501d82440
+  Ono: e6d825e80ec73325e6d872ae4f2304f7378acb0e
   Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
   RxCocoa: d88ba0f1f6abf040011a9eb4b539324fc426843a
   RxDataSources: cb7c31e652a87ebb919da45f716bbb87b3765f6b
@@ -88,6 +92,6 @@ SPEC CHECKSUMS:
   WCDB.swift: 5bb038bc5bb46067cccc7c48392e8f4c4a15def0
   WKWebViewJavascriptBridge: 8da532409bc489ba2c0a69cf38e5d1cd49e3d5e4
 
-PODFILE CHECKSUM: 568cdcc8785cd1a678d2807288ef420acbe4cc5b
+PODFILE CHECKSUM: 00380c7015f92d40678a1e58c7c862fadf145c48
 
 COCOAPODS: 1.5.2

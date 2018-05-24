@@ -7,22 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		258F09E420B6A71C004256EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258F09E320B6A71C004256EF /* AppDelegate.swift */; };
-		258F09E620B6A71C004256EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258F09E520B6A71C004256EF /* ViewController.swift */; };
-		258F09E920B6A71C004256EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 258F09E720B6A71C004256EF /* Main.storyboard */; };
+		252758BB20B6B2B000347877 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252758B620B6B2B000347877 /* AppDelegate.swift */; };
+		252758BC20B6B2B000347877 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 252758B820B6B2B000347877 /* LaunchScreen.storyboard */; };
+		252758BD20B6B2B000347877 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 252758BA20B6B2B000347877 /* Info.plist */; };
+		252758BF20B6B2E100347877 /* AppDelegat+Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252758BE20B6B2E100347877 /* AppDelegat+Service.swift */; };
+		252758C120B6B47F00347877 /* AppDelegate+Root.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252758C020B6B47F00347877 /* AppDelegate+Root.swift */; };
+		252758C420B6BDB700347877 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252758C320B6BDB700347877 /* UIColorExtension.swift */; };
+		252758C920B6BE6800347877 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252758C820B6BE6800347877 /* MainViewController.swift */; };
+		252758DA20B6BFD000347877 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252758D920B6BFD000347877 /* BaseViewController.swift */; };
+		252758DC20B6BFF200347877 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252758DB20B6BFF200347877 /* UIViewControllerExtension.swift */; };
+		252758DE20B6C0AB00347877 /* PersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252758DD20B6C0AB00347877 /* PersonalViewController.swift */; };
+		252758E020B6C0C100347877 /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252758DF20B6C0C100347877 /* RecommendViewController.swift */; };
+		252758E220B6C0D000347877 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252758E120B6C0D000347877 /* SearchViewController.swift */; };
 		258F09EB20B6A71D004256EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 258F09EA20B6A71D004256EF /* Assets.xcassets */; };
-		258F09EE20B6A71D004256EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 258F09EC20B6A71D004256EF /* LaunchScreen.storyboard */; };
 		2892E8EDB65262D04C0C20F4 /* Pods_magnetX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAE5AD0089BEF84A2A4E36F7 /* Pods_magnetX.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		252758B620B6B2B000347877 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		252758B920B6B2B000347877 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		252758BA20B6B2B000347877 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		252758BE20B6B2E100347877 /* AppDelegat+Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegat+Service.swift"; sourceTree = "<group>"; };
+		252758C020B6B47F00347877 /* AppDelegate+Root.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Root.swift"; sourceTree = "<group>"; };
+		252758C320B6BDB700347877 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		252758C820B6BE6800347877 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		252758D920B6BFD000347877 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		252758DB20B6BFF200347877 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		252758DD20B6C0AB00347877 /* PersonalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalViewController.swift; sourceTree = "<group>"; };
+		252758DF20B6C0C100347877 /* RecommendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
+		252758E120B6C0D000347877 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		258F09E020B6A71C004256EF /* magnetX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = magnetX.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		258F09E320B6A71C004256EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		258F09E520B6A71C004256EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		258F09E820B6A71C004256EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		258F09EA20B6A71D004256EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		258F09ED20B6A71D004256EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		258F09EF20B6A71D004256EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3AF93A1D4E4CAE38E95B98C0 /* Pods-magnetX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-magnetX.release.xcconfig"; path = "Pods/Target Support Files/Pods-magnetX/Pods-magnetX.release.xcconfig"; sourceTree = "<group>"; };
 		793B842B83B43925AAEC4A63 /* Pods-magnetX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-magnetX.debug.xcconfig"; path = "Pods/Target Support Files/Pods-magnetX/Pods-magnetX.debug.xcconfig"; sourceTree = "<group>"; };
 		FAE5AD0089BEF84A2A4E36F7 /* Pods_magnetX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_magnetX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +64,182 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		252758B520B6B2B000347877 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				252758B620B6B2B000347877 /* AppDelegate.swift */,
+				252758BE20B6B2E100347877 /* AppDelegat+Service.swift */,
+				252758C020B6B47F00347877 /* AppDelegate+Root.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		252758B720B6B2B000347877 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				252758B820B6B2B000347877 /* LaunchScreen.storyboard */,
+				252758BA20B6B2B000347877 /* Info.plist */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		252758C220B6B4B900347877 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				252758C320B6BDB700347877 /* UIColorExtension.swift */,
+				252758DB20B6BFF200347877 /* UIViewControllerExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		252758C520B6BE5700347877 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				252758C720B6BE5700347877 /* Main */,
+				252758C620B6BE5700347877 /* Base */,
+				252758CA20B6BF8700347877 /* Recommend */,
+				252758CF20B6BF8700347877 /* Search */,
+				252758D420B6BF8700347877 /* Personal */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		252758C620B6BE5700347877 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				252758D920B6BFD000347877 /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		252758C720B6BE5700347877 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				252758C820B6BE6800347877 /* MainViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		252758CA20B6BF8700347877 /* Recommend */ = {
+			isa = PBXGroup;
+			children = (
+				252758CB20B6BF8700347877 /* Controller */,
+				252758CC20B6BF8700347877 /* Model */,
+				252758CD20B6BF8700347877 /* View */,
+				252758CE20B6BF8700347877 /* ViewModel */,
+			);
+			path = Recommend;
+			sourceTree = "<group>";
+		};
+		252758CB20B6BF8700347877 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				252758DF20B6C0C100347877 /* RecommendViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		252758CC20B6BF8700347877 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		252758CD20B6BF8700347877 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		252758CE20B6BF8700347877 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		252758CF20B6BF8700347877 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				252758D020B6BF8700347877 /* Controller */,
+				252758D120B6BF8700347877 /* Model */,
+				252758D220B6BF8700347877 /* View */,
+				252758D320B6BF8700347877 /* ViewModel */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		252758D020B6BF8700347877 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				252758E120B6C0D000347877 /* SearchViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		252758D120B6BF8700347877 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		252758D220B6BF8700347877 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		252758D320B6BF8700347877 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		252758D420B6BF8700347877 /* Personal */ = {
+			isa = PBXGroup;
+			children = (
+				252758D520B6BF8700347877 /* Controller */,
+				252758D620B6BF8700347877 /* Model */,
+				252758D720B6BF8700347877 /* View */,
+				252758D820B6BF8700347877 /* ViewModel */,
+			);
+			path = Personal;
+			sourceTree = "<group>";
+		};
+		252758D520B6BF8700347877 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				252758DD20B6C0AB00347877 /* PersonalViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		252758D620B6BF8700347877 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		252758D720B6BF8700347877 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		252758D820B6BF8700347877 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		258F09D720B6A71C004256EF = {
 			isa = PBXGroup;
 			children = (
@@ -70,12 +261,11 @@
 		258F09E220B6A71C004256EF /* magnetX */ = {
 			isa = PBXGroup;
 			children = (
-				258F09E320B6A71C004256EF /* AppDelegate.swift */,
-				258F09E520B6A71C004256EF /* ViewController.swift */,
-				258F09E720B6A71C004256EF /* Main.storyboard */,
+				252758B520B6B2B000347877 /* App */,
+				252758C520B6BE5700347877 /* Classes */,
+				252758C220B6B4B900347877 /* Extension */,
+				252758B720B6B2B000347877 /* Other */,
 				258F09EA20B6A71D004256EF /* Assets.xcassets */,
-				258F09EC20B6A71D004256EF /* LaunchScreen.storyboard */,
-				258F09EF20B6A71D004256EF /* Info.plist */,
 			);
 			path = magnetX;
 			sourceTree = "<group>";
@@ -148,9 +338,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				258F09EE20B6A71D004256EF /* LaunchScreen.storyboard in Resources */,
 				258F09EB20B6A71D004256EF /* Assets.xcassets in Resources */,
-				258F09E920B6A71C004256EF /* Main.storyboard in Resources */,
+				252758BC20B6B2B000347877 /* LaunchScreen.storyboard in Resources */,
+				252758BD20B6B2B000347877 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,6 +382,7 @@
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Ono/Ono.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
@@ -213,6 +404,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Ono.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
@@ -234,26 +426,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				258F09E620B6A71C004256EF /* ViewController.swift in Sources */,
-				258F09E420B6A71C004256EF /* AppDelegate.swift in Sources */,
+				252758E220B6C0D000347877 /* SearchViewController.swift in Sources */,
+				252758BF20B6B2E100347877 /* AppDelegat+Service.swift in Sources */,
+				252758C120B6B47F00347877 /* AppDelegate+Root.swift in Sources */,
+				252758E020B6C0C100347877 /* RecommendViewController.swift in Sources */,
+				252758DE20B6C0AB00347877 /* PersonalViewController.swift in Sources */,
+				252758BB20B6B2B000347877 /* AppDelegate.swift in Sources */,
+				252758C420B6BDB700347877 /* UIColorExtension.swift in Sources */,
+				252758C920B6BE6800347877 /* MainViewController.swift in Sources */,
+				252758DC20B6BFF200347877 /* UIViewControllerExtension.swift in Sources */,
+				252758DA20B6BFD000347877 /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		258F09E720B6A71C004256EF /* Main.storyboard */ = {
+		252758B820B6B2B000347877 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				258F09E820B6A71C004256EF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		258F09EC20B6A71D004256EF /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				258F09ED20B6A71D004256EF /* Base */,
+				252758B920B6B2B000347877 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -380,8 +572,11 @@
 			baseConfigurationReference = 793B842B83B43925AAEC4A63 /* Pods-magnetX.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = magnetX/Info.plist;
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = "$(inherited)";
+				INFOPLIST_FILE = "$(SRCROOT)/magnetX/Other/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -398,8 +593,11 @@
 			baseConfigurationReference = 3AF93A1D4E4CAE38E95B98C0 /* Pods-magnetX.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = magnetX/Info.plist;
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = "$(inherited)";
+				INFOPLIST_FILE = "$(SRCROOT)/magnetX/Other/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

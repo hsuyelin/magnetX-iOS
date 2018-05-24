@@ -20,5 +20,6 @@ target 'magnetX' do
   pod 'RxCocoa'
   pod 'RxDataSources'
   pod 'SteviaLayout'
+  pod 'Ono'
 
 end
