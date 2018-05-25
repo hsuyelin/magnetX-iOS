@@ -1,0 +1,22 @@
+/* 
+  Localizable.strings
+  YPImagePicker
+
+  Created by Sacha Durand Saint Omer on 02/11/16.
+  Copyright © 2016 Yummypets. All rights reserved.
+*/
+
+"YPImagePickerLibrary" = "相册";
+"YPImagePickerPhoto" = "相机";
+"YPImagePickerVideo" = "视频";
+"YPImagePickerNext" = "下一步";
+"YPImagePickerFilter" = "滤镜";
+"YPImagePickerVideoTooLongTitle" = "视频时间";
+"YPImagePickerVideoTooLongDetail" = "选一个时间少于 %@ 秒的视频";
+"YPImagePickerPermissionDeniedPopupTitle" = "权限未开启";
+"YPImagePickerPermissionDeniedPopupMessage" = "请在系统设置中开启权限";
+"YPImagePickerPermissionDeniedPopupCancel" = "取消";
+"YPImagePickerPermissionDeniedPopupGrantPermission" = "立即前往";
+
+
+

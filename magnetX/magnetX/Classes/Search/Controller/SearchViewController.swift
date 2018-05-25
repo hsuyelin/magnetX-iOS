@@ -10,5 +10,19 @@ import UIKit
 import Foundation
 
 class SearchViewController: BaseViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        setupNavigationItem()
+    }
     
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    private func setupNavigationItem() {
+        navigation.item.leftBarButtonItem = nil
+        navigation.item.title = "找片"
+    }
 }

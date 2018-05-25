@@ -7,3 +7,18 @@
 //
 
 import Foundation
+import EachNavigationBar
+
+extension AppDelegate: UITabBarControllerDelegate {
+    
+    func setRootViewController() {
+        UIViewController.setupNavigationBar
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.backgroundColor = UIColor.white
+        let mainVC = MainViewController()
+        mainVC.tabBar.tintColor = UIColor(hex: "09BB07")
+        mainVC.delegate = self
+        window?.rootViewController = mainVC
+        window?.makeKeyAndVisible()
+    }
+}

@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		252758BB20B6B2B000347877 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252758B620B6B2B000347877 /* AppDelegate.swift */; };
 		252758BC20B6B2B000347877 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 252758B820B6B2B000347877 /* LaunchScreen.storyboard */; };
-		252758BD20B6B2B000347877 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 252758BA20B6B2B000347877 /* Info.plist */; };
 		252758BF20B6B2E100347877 /* AppDelegat+Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252758BE20B6B2E100347877 /* AppDelegat+Service.swift */; };
 		252758C120B6B47F00347877 /* AppDelegate+Root.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252758C020B6B47F00347877 /* AppDelegate+Root.swift */; };
 		252758C420B6BDB700347877 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252758C320B6BDB700347877 /* UIColorExtension.swift */; };
@@ -19,6 +18,96 @@
 		252758DE20B6C0AB00347877 /* PersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252758DD20B6C0AB00347877 /* PersonalViewController.swift */; };
 		252758E020B6C0C100347877 /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252758DF20B6C0C100347877 /* RecommendViewController.swift */; };
 		252758E220B6C0D000347877 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252758E120B6C0D000347877 /* SearchViewController.swift */; };
+		2579028B20B7A2C600272600 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2579028A20B7A2C600272600 /* UIImageExtension.swift */; };
+		2579028D20B7B01F00272600 /* PopularModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2579028C20B7B01F00272600 /* PopularModel.swift */; };
+		2579029120B7B23A00272600 /* UIScreenExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2579028E20B7B23A00272600 /* UIScreenExtension.swift */; };
+		2579029220B7B23A00272600 /* PixelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2579028F20B7B23A00272600 /* PixelExtension.swift */; };
+		2579029320B7B23A00272600 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2579029020B7B23A00272600 /* StringExtension.swift */; };
+		2579029620B7B2CC00272600 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2579029520B7B2CC00272600 /* Common.swift */; };
+		2579029D20B7B59400272600 /* Data+HandyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2579029820B7B59300272600 /* Data+HandyJSON.swift */; };
+		2579029E20B7B59400272600 /* HTTPResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2579029920B7B59300272600 /* HTTPResponse.swift */; };
+		2579029F20B7B59400272600 /* Network+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2579029A20B7B59300272600 /* Network+Rx.swift */; };
+		257902A020B7B59400272600 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2579029B20B7B59300272600 /* Network.swift */; };
+		257902A120B7B59400272600 /* NetworkEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2579029C20B7B59300272600 /* NetworkEnvironment.swift */; };
+		257902A320B7B9ED00272600 /* ResponseCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257902A220B7B9ED00272600 /* ResponseCode.swift */; };
+		2579030C20B7BE7C00272600 /* HTTPActivityPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257902A620B7BE7B00272600 /* HTTPActivityPlugin.swift */; };
+		2579030D20B7BE7C00272600 /* HTTPCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257902A720B7BE7B00272600 /* HTTPCache.swift */; };
+		2579030E20B7BE7C00272600 /* HTTPLoggerPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257902A820B7BE7B00272600 /* HTTPLoggerPlugin.swift */; };
+		2579030F20B7BE7C00272600 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257902AA20B7BE7B00272600 /* Router.swift */; };
+		2579031020B7BE7C00272600 /* HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257902AC20B7BE7B00272600 /* HUD.swift */; };
+		2579031120B7BE7C00272600 /* KRActivityIndicatorPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257902AF20B7BE7B00272600 /* KRActivityIndicatorPath.swift */; };
+		2579031220B7BE7C00272600 /* KRActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257902B020B7BE7B00272600 /* KRActivityIndicatorView.swift */; };
+		2579031320B7BE7C00272600 /* KRActivityIndicatorViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257902B120B7BE7B00272600 /* KRActivityIndicatorViewStyle.swift */; };
+		2579031420B7BE7C00272600 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257902B420B7BE7B00272600 /* Extensions.swift */; };
+		2579031520B7BE7C00272600 /* InnerKRProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257902B520B7BE7B00272600 /* InnerKRProgressHUD.swift */; };
+		2579031620B7BE7C00272600 /* KRProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257902B620B7BE7B00272600 /* KRProgressHUD.swift */; };
+		2579031720B7BE7C00272600 /* KRProgressHUDIconType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257902B720B7BE7B00272600 /* KRProgressHUDIconType.swift */; };
+		2579031820B7BE7C00272600 /* KRProgressHUDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257902B820B7BE7B00272600 /* KRProgressHUDViewController.swift */; };
+		2579031920B7BE7C00272600 /* PageMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257902BA20B7BE7B00272600 /* PageMenuCell.swift */; };
+		2579031A20B7BE7C00272600 /* PageMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257902BB20B7BE7B00272600 /* PageMenuView.swift */; };
+		2579031B20B7BE7C00272600 /* PageScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257902BC20B7BE7B00272600 /* PageScrollView.swift */; };
+		2579031C20B7BE7C00272600 /* WebViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257902BE20B7BE7B00272600 /* WebViewContainer.swift */; };
+		2579031D20B7BE7C00272600 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257902BF20B7BE7B00272600 /* WebViewController.swift */; };
+		2579031E20B7BE7C00272600 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 257902C220B7BE7B00272600 /* Assets.xcassets */; };
+		2579031F20B7BE7C00272600 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 257902C320B7BE7B00272600 /* Localizable.strings */; };
+		2579032020B7BE7C00272600 /* YPBottomPager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257902CC20B7BE7B00272600 /* YPBottomPager.swift */; };
+		2579032120B7BE7C00272600 /* YPBottomPagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257902CD20B7BE7B00272600 /* YPBottomPagerView.swift */; };
+		2579032220B7BE7C00272600 /* YPMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257902CE20B7BE7B00272600 /* YPMenuItem.swift */; };
+		2579032320B7BE7C00272600 /* YPPagerMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257902CF20B7BE7B00272600 /* YPPagerMenu.swift */; };
+		2579032420B7BE7C00272600 /* PostiOS10PhotoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257902D120B7BE7B00272600 /* PostiOS10PhotoCapture.swift */; };
+		2579032520B7BE7C00272600 /* PreiOS10PhotoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257902D220B7BE7B00272600 /* PreiOS10PhotoCapture.swift */; };
+		2579032620B7BE7C00272600 /* YPCameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257902D320B7BE7B00272600 /* YPCameraVC.swift */; };
+		2579032720B7BE7C00272600 /* YPCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257902D420B7BE7B00272600 /* YPCameraView.swift */; };
+		2579032820B7BE7C00272600 /* YPPhotoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257902D520B7BE7B00272600 /* YPPhotoCapture.swift */; };
+		2579032920B7BE7C00272600 /* YPPhotoCaptureDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257902D620B7BE7B00272600 /* YPPhotoCaptureDefaults.swift */; };
+		2579032A20B7BE7C00272600 /* YPImagePickerConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257902D820B7BE7B00272600 /* YPImagePickerConfiguration.swift */; };
+		2579032B20B7BE7C00272600 /* YPLibraryImageSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257902D920B7BE7B00272600 /* YPLibraryImageSize.swift */; };
+		2579032C20B7BE7C00272600 /* YPPickerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257902DA20B7BE7B00272600 /* YPPickerScreen.swift */; };
+		2579032D20B7BE7C00272600 /* YPWordings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257902DB20B7BE7B00272600 /* YPWordings.swift */; };
+		2579032E20B7BE7C00272600 /* YPCropVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257902DD20B7BE7B00272600 /* YPCropVC.swift */; };
+		2579032F20B7BE7C00272600 /* YPCropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257902DE20B7BE7B00272600 /* YPCropView.swift */; };
+		2579033020B7BE7C00272600 /* YPFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257902E020B7BE7B00272600 /* YPFilter.swift */; };
+		2579033120B7BE7C00272600 /* YPFilterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257902E120B7BE7B00272600 /* YPFilterCollectionViewCell.swift */; };
+		2579033220B7BE7C00272600 /* YPFilterPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257902E220B7BE7B00272600 /* YPFilterPreview.swift */; };
+		2579033320B7BE7C00272600 /* YPFiltersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257902E320B7BE7B00272600 /* YPFiltersVC.swift */; };
+		2579033420B7BE7C00272600 /* YPFiltersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257902E420B7BE7B00272600 /* YPFiltersView.swift */; };
+		2579033520B7BE7C00272600 /* CGRect+Difference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257902E620B7BE7B00272600 /* CGRect+Difference.swift */; };
+		2579033620B7BE7C00272600 /* IndexSet+IndexPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257902E720B7BE7B00272600 /* IndexSet+IndexPath.swift */; };
+		2579033720B7BE7C00272600 /* PermissionCheckable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257902E820B7BE7B00272600 /* PermissionCheckable.swift */; };
+		2579033820B7BE7C00272600 /* PHCachingImageManager+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257902E920B7BE7B00272600 /* PHCachingImageManager+Helpers.swift */; };
+		2579033920B7BE7C00272600 /* PHFetchResult + IndexPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257902EA20B7BE7B00272600 /* PHFetchResult + IndexPath.swift */; };
+		2579033A20B7BE7C00272600 /* UICollectionView+IndexPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257902EB20B7BE7B00272600 /* UICollectionView+IndexPath.swift */; };
+		2579033B20B7BE7C00272600 /* UIImage+ResetOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257902EC20B7BE7B00272600 /* UIImage+ResetOrientation.swift */; };
+		2579033C20B7BE7C00272600 /* YPAlerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257902ED20B7BE7B00272600 /* YPAlerts.swift */; };
+		2579033D20B7BE7C00272600 /* YPDragDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257902EE20B7BE7B00272600 /* YPDragDirection.swift */; };
+		2579033E20B7BE7C00272600 /* YPHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257902EF20B7BE7B00272600 /* YPHelpers.swift */; };
+		2579033F20B7BE7C00272600 /* YPPermissionDeniedPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257902F020B7BE7B00272600 /* YPPermissionDeniedPopup.swift */; };
+		2579034020B7BE7C00272600 /* YPPhotoSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257902F120B7BE7B00272600 /* YPPhotoSaver.swift */; };
+		2579034120B7BE7C00272600 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 257902F220B7BE7B00272600 /* Info.plist */; };
+		2579034220B7BE7C00272600 /* LibraryMediaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257902F420B7BE7B00272600 /* LibraryMediaManager.swift */; };
+		2579034320B7BE7C00272600 /* YPAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257902F520B7BE7B00272600 /* YPAlbum.swift */; };
+		2579034420B7BE7C00272600 /* YPAlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257902F620B7BE7B00272600 /* YPAlbumCell.swift */; };
+		2579034520B7BE7C00272600 /* YPAlbumsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257902F720B7BE7B00272600 /* YPAlbumsManager.swift */; };
+		2579034620B7BE7C00272600 /* YPAlbumVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257902F820B7BE7B00272600 /* YPAlbumVC.swift */; };
+		2579034720B7BE7C00272600 /* YPAlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257902F920B7BE7B00272600 /* YPAlbumView.swift */; };
+		2579034820B7BE7C00272600 /* YPGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257902FA20B7BE7B00272600 /* YPGridView.swift */; };
+		2579034920B7BE7C00272600 /* YPImageCropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257902FB20B7BE7B00272600 /* YPImageCropView.swift */; };
+		2579034A20B7BE7C00272600 /* YPImageCropViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257902FC20B7BE7B00272600 /* YPImageCropViewContainer.swift */; };
+		2579034B20B7BE7C00272600 /* YPLibrary+LibraryChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257902FD20B7BE7B00272600 /* YPLibrary+LibraryChange.swift */; };
+		2579034C20B7BE7C00272600 /* YPLibraryVC + UIHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257902FE20B7BE7B00272600 /* YPLibraryVC + UIHelpers.swift */; };
+		2579034D20B7BE7C00272600 /* YPLibraryVC+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257902FF20B7BE7B00272600 /* YPLibraryVC+CollectionView.swift */; };
+		2579034E20B7BE7C00272600 /* YPLibraryVC+PanGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2579030020B7BE7B00272600 /* YPLibraryVC+PanGesture.swift */; };
+		2579034F20B7BE7C00272600 /* YPLibraryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2579030120B7BE7B00272600 /* YPLibraryVC.swift */; };
+		2579035020B7BE7C00272600 /* YPLibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2579030220B7BE7B00272600 /* YPLibraryView.swift */; };
+		2579035120B7BE7C00272600 /* YPLibraryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2579030320B7BE7B00272600 /* YPLibraryView.xib */; };
+		2579035220B7BE7C00272600 /* YPLibraryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2579030420B7BE7B00272600 /* YPLibraryViewCell.swift */; };
+		2579035320B7BE7C00272600 /* YPLibraryViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2579030520B7BE7B00272600 /* YPLibraryViewDelegate.swift */; };
+		2579035420B7BE7C00272600 /* YPVideoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2579030720B7BE7B00272600 /* YPVideoHelper.swift */; };
+		2579035520B7BE7C00272600 /* YPVideoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2579030820B7BE7B00272600 /* YPVideoVC.swift */; };
+		2579035620B7BE7C00272600 /* YPImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2579030920B7BE7B00272600 /* YPImagePicker.swift */; };
+		2579035720B7BE7C00272600 /* YPPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2579030B20B7BE7B00272600 /* YPPickerVC.swift */; };
+		2579035C20B7D76800272600 /* MoviesTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2579035B20B7D76800272600 /* MoviesTarget.swift */; };
+		2579036420B80DE900272600 /* XUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2579036320B80DE900272600 /* XUtils.swift */; };
 		258F09EB20B6A71D004256EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 258F09EA20B6A71D004256EF /* Assets.xcassets */; };
 		2892E8EDB65262D04C0C20F4 /* Pods_magnetX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAE5AD0089BEF84A2A4E36F7 /* Pods_magnetX.framework */; };
 /* End PBXBuildFile section */
@@ -36,6 +125,103 @@
 		252758DD20B6C0AB00347877 /* PersonalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalViewController.swift; sourceTree = "<group>"; };
 		252758DF20B6C0C100347877 /* RecommendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
 		252758E120B6C0D000347877 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		2579028A20B7A2C600272600 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		2579028C20B7B01F00272600 /* PopularModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularModel.swift; sourceTree = "<group>"; };
+		2579028E20B7B23A00272600 /* UIScreenExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIScreenExtension.swift; sourceTree = "<group>"; };
+		2579028F20B7B23A00272600 /* PixelExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PixelExtension.swift; sourceTree = "<group>"; };
+		2579029020B7B23A00272600 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		2579029520B7B2CC00272600 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		2579029820B7B59300272600 /* Data+HandyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+HandyJSON.swift"; sourceTree = "<group>"; };
+		2579029920B7B59300272600 /* HTTPResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPResponse.swift; sourceTree = "<group>"; };
+		2579029A20B7B59300272600 /* Network+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Network+Rx.swift"; sourceTree = "<group>"; };
+		2579029B20B7B59300272600 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		2579029C20B7B59300272600 /* NetworkEnvironment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkEnvironment.swift; sourceTree = "<group>"; };
+		257902A220B7B9ED00272600 /* ResponseCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseCode.swift; sourceTree = "<group>"; };
+		257902A620B7BE7B00272600 /* HTTPActivityPlugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPActivityPlugin.swift; sourceTree = "<group>"; };
+		257902A720B7BE7B00272600 /* HTTPCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPCache.swift; sourceTree = "<group>"; };
+		257902A820B7BE7B00272600 /* HTTPLoggerPlugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPLoggerPlugin.swift; sourceTree = "<group>"; };
+		257902AA20B7BE7B00272600 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		257902AC20B7BE7B00272600 /* HUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HUD.swift; sourceTree = "<group>"; };
+		257902AF20B7BE7B00272600 /* KRActivityIndicatorPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KRActivityIndicatorPath.swift; sourceTree = "<group>"; };
+		257902B020B7BE7B00272600 /* KRActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KRActivityIndicatorView.swift; sourceTree = "<group>"; };
+		257902B120B7BE7B00272600 /* KRActivityIndicatorViewStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KRActivityIndicatorViewStyle.swift; sourceTree = "<group>"; };
+		257902B420B7BE7B00272600 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		257902B520B7BE7B00272600 /* InnerKRProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InnerKRProgressHUD.swift; sourceTree = "<group>"; };
+		257902B620B7BE7B00272600 /* KRProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KRProgressHUD.swift; sourceTree = "<group>"; };
+		257902B720B7BE7B00272600 /* KRProgressHUDIconType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KRProgressHUDIconType.swift; sourceTree = "<group>"; };
+		257902B820B7BE7B00272600 /* KRProgressHUDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KRProgressHUDViewController.swift; sourceTree = "<group>"; };
+		257902BA20B7BE7B00272600 /* PageMenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageMenuCell.swift; sourceTree = "<group>"; };
+		257902BB20B7BE7B00272600 /* PageMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageMenuView.swift; sourceTree = "<group>"; };
+		257902BC20B7BE7B00272600 /* PageScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageScrollView.swift; sourceTree = "<group>"; };
+		257902BE20B7BE7B00272600 /* WebViewContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewContainer.swift; sourceTree = "<group>"; };
+		257902BF20B7BE7B00272600 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		257902C220B7BE7B00272600 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		257902C420B7BE7B00272600 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		257902C520B7BE7B00272600 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		257902C620B7BE7B00272600 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		257902C720B7BE7B00272600 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		257902C820B7BE7B00272600 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		257902C920B7BE7B00272600 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		257902CC20B7BE7B00272600 /* YPBottomPager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPBottomPager.swift; sourceTree = "<group>"; };
+		257902CD20B7BE7B00272600 /* YPBottomPagerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPBottomPagerView.swift; sourceTree = "<group>"; };
+		257902CE20B7BE7B00272600 /* YPMenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPMenuItem.swift; sourceTree = "<group>"; };
+		257902CF20B7BE7B00272600 /* YPPagerMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPPagerMenu.swift; sourceTree = "<group>"; };
+		257902D120B7BE7B00272600 /* PostiOS10PhotoCapture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostiOS10PhotoCapture.swift; sourceTree = "<group>"; };
+		257902D220B7BE7B00272600 /* PreiOS10PhotoCapture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreiOS10PhotoCapture.swift; sourceTree = "<group>"; };
+		257902D320B7BE7B00272600 /* YPCameraVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPCameraVC.swift; sourceTree = "<group>"; };
+		257902D420B7BE7B00272600 /* YPCameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPCameraView.swift; sourceTree = "<group>"; };
+		257902D520B7BE7B00272600 /* YPPhotoCapture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPPhotoCapture.swift; sourceTree = "<group>"; };
+		257902D620B7BE7B00272600 /* YPPhotoCaptureDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPPhotoCaptureDefaults.swift; sourceTree = "<group>"; };
+		257902D820B7BE7B00272600 /* YPImagePickerConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPImagePickerConfiguration.swift; sourceTree = "<group>"; };
+		257902D920B7BE7B00272600 /* YPLibraryImageSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPLibraryImageSize.swift; sourceTree = "<group>"; };
+		257902DA20B7BE7B00272600 /* YPPickerScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPPickerScreen.swift; sourceTree = "<group>"; };
+		257902DB20B7BE7B00272600 /* YPWordings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPWordings.swift; sourceTree = "<group>"; };
+		257902DD20B7BE7B00272600 /* YPCropVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPCropVC.swift; sourceTree = "<group>"; };
+		257902DE20B7BE7B00272600 /* YPCropView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPCropView.swift; sourceTree = "<group>"; };
+		257902E020B7BE7B00272600 /* YPFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPFilter.swift; sourceTree = "<group>"; };
+		257902E120B7BE7B00272600 /* YPFilterCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPFilterCollectionViewCell.swift; sourceTree = "<group>"; };
+		257902E220B7BE7B00272600 /* YPFilterPreview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPFilterPreview.swift; sourceTree = "<group>"; };
+		257902E320B7BE7B00272600 /* YPFiltersVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPFiltersVC.swift; sourceTree = "<group>"; };
+		257902E420B7BE7B00272600 /* YPFiltersView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPFiltersView.swift; sourceTree = "<group>"; };
+		257902E620B7BE7B00272600 /* CGRect+Difference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+Difference.swift"; sourceTree = "<group>"; };
+		257902E720B7BE7B00272600 /* IndexSet+IndexPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IndexSet+IndexPath.swift"; sourceTree = "<group>"; };
+		257902E820B7BE7B00272600 /* PermissionCheckable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PermissionCheckable.swift; sourceTree = "<group>"; };
+		257902E920B7BE7B00272600 /* PHCachingImageManager+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PHCachingImageManager+Helpers.swift"; sourceTree = "<group>"; };
+		257902EA20B7BE7B00272600 /* PHFetchResult + IndexPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PHFetchResult + IndexPath.swift"; sourceTree = "<group>"; };
+		257902EB20B7BE7B00272600 /* UICollectionView+IndexPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+IndexPath.swift"; sourceTree = "<group>"; };
+		257902EC20B7BE7B00272600 /* UIImage+ResetOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+ResetOrientation.swift"; sourceTree = "<group>"; };
+		257902ED20B7BE7B00272600 /* YPAlerts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPAlerts.swift; sourceTree = "<group>"; };
+		257902EE20B7BE7B00272600 /* YPDragDirection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPDragDirection.swift; sourceTree = "<group>"; };
+		257902EF20B7BE7B00272600 /* YPHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPHelpers.swift; sourceTree = "<group>"; };
+		257902F020B7BE7B00272600 /* YPPermissionDeniedPopup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPPermissionDeniedPopup.swift; sourceTree = "<group>"; };
+		257902F120B7BE7B00272600 /* YPPhotoSaver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPPhotoSaver.swift; sourceTree = "<group>"; };
+		257902F220B7BE7B00272600 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		257902F420B7BE7B00272600 /* LibraryMediaManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryMediaManager.swift; sourceTree = "<group>"; };
+		257902F520B7BE7B00272600 /* YPAlbum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPAlbum.swift; sourceTree = "<group>"; };
+		257902F620B7BE7B00272600 /* YPAlbumCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPAlbumCell.swift; sourceTree = "<group>"; };
+		257902F720B7BE7B00272600 /* YPAlbumsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPAlbumsManager.swift; sourceTree = "<group>"; };
+		257902F820B7BE7B00272600 /* YPAlbumVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPAlbumVC.swift; sourceTree = "<group>"; };
+		257902F920B7BE7B00272600 /* YPAlbumView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPAlbumView.swift; sourceTree = "<group>"; };
+		257902FA20B7BE7B00272600 /* YPGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPGridView.swift; sourceTree = "<group>"; };
+		257902FB20B7BE7B00272600 /* YPImageCropView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPImageCropView.swift; sourceTree = "<group>"; };
+		257902FC20B7BE7B00272600 /* YPImageCropViewContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPImageCropViewContainer.swift; sourceTree = "<group>"; };
+		257902FD20B7BE7B00272600 /* YPLibrary+LibraryChange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "YPLibrary+LibraryChange.swift"; sourceTree = "<group>"; };
+		257902FE20B7BE7B00272600 /* YPLibraryVC + UIHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "YPLibraryVC + UIHelpers.swift"; sourceTree = "<group>"; };
+		257902FF20B7BE7B00272600 /* YPLibraryVC+CollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "YPLibraryVC+CollectionView.swift"; sourceTree = "<group>"; };
+		2579030020B7BE7B00272600 /* YPLibraryVC+PanGesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "YPLibraryVC+PanGesture.swift"; sourceTree = "<group>"; };
+		2579030120B7BE7B00272600 /* YPLibraryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPLibraryVC.swift; sourceTree = "<group>"; };
+		2579030220B7BE7B00272600 /* YPLibraryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPLibraryView.swift; sourceTree = "<group>"; };
+		2579030320B7BE7B00272600 /* YPLibraryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YPLibraryView.xib; sourceTree = "<group>"; };
+		2579030420B7BE7B00272600 /* YPLibraryViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPLibraryViewCell.swift; sourceTree = "<group>"; };
+		2579030520B7BE7B00272600 /* YPLibraryViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPLibraryViewDelegate.swift; sourceTree = "<group>"; };
+		2579030720B7BE7B00272600 /* YPVideoHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPVideoHelper.swift; sourceTree = "<group>"; };
+		2579030820B7BE7B00272600 /* YPVideoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPVideoVC.swift; sourceTree = "<group>"; };
+		2579030920B7BE7B00272600 /* YPImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPImagePicker.swift; sourceTree = "<group>"; };
+		2579030A20B7BE7B00272600 /* YPImagePickerHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YPImagePickerHeader.h; sourceTree = "<group>"; };
+		2579030B20B7BE7B00272600 /* YPPickerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPPickerVC.swift; sourceTree = "<group>"; };
+		2579035920B7C03B00272600 /* magnetX-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "magnetX-Bridging-Header.h"; sourceTree = "<group>"; };
+		2579035B20B7D76800272600 /* MoviesTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTarget.swift; sourceTree = "<group>"; };
+		2579036320B80DE900272600 /* XUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XUtils.swift; sourceTree = "<group>"; };
 		258F09E020B6A71C004256EF /* magnetX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = magnetX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		258F09EA20B6A71D004256EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3AF93A1D4E4CAE38E95B98C0 /* Pods-magnetX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-magnetX.release.xcconfig"; path = "Pods/Target Support Files/Pods-magnetX/Pods-magnetX.release.xcconfig"; sourceTree = "<group>"; };
@@ -86,8 +272,12 @@
 		252758C220B6B4B900347877 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				2579028A20B7A2C600272600 /* UIImageExtension.swift */,
 				252758C320B6BDB700347877 /* UIColorExtension.swift */,
 				252758DB20B6BFF200347877 /* UIViewControllerExtension.swift */,
+				2579028F20B7B23A00272600 /* PixelExtension.swift */,
+				2579029020B7B23A00272600 /* StringExtension.swift */,
+				2579028E20B7B23A00272600 /* UIScreenExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -142,6 +332,7 @@
 		252758CC20B6BF8700347877 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2579028C20B7B01F00272600 /* PopularModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -240,6 +431,289 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		2579029420B7B2AC00272600 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				2579029520B7B2CC00272600 /* Common.swift */,
+				2579036320B80DE900272600 /* XUtils.swift */,
+			);
+			name = Common;
+			path = magnetX/Common;
+			sourceTree = SOURCE_ROOT;
+		};
+		2579029720B7B59300272600 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				2579029820B7B59300272600 /* Data+HandyJSON.swift */,
+				2579029920B7B59300272600 /* HTTPResponse.swift */,
+				2579029A20B7B59300272600 /* Network+Rx.swift */,
+				2579029B20B7B59300272600 /* Network.swift */,
+				2579029C20B7B59300272600 /* NetworkEnvironment.swift */,
+				257902A220B7B9ED00272600 /* ResponseCode.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		257902A420B7BE7B00272600 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				257902A520B7BE7B00272600 /* HTTPProvider */,
+				257902A920B7BE7B00272600 /* Router */,
+				257902AB20B7BE7B00272600 /* UI */,
+				257902C020B7BE7B00272600 /* YPImagePicker */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		257902A520B7BE7B00272600 /* HTTPProvider */ = {
+			isa = PBXGroup;
+			children = (
+				257902A620B7BE7B00272600 /* HTTPActivityPlugin.swift */,
+				257902A720B7BE7B00272600 /* HTTPCache.swift */,
+				257902A820B7BE7B00272600 /* HTTPLoggerPlugin.swift */,
+			);
+			path = HTTPProvider;
+			sourceTree = "<group>";
+		};
+		257902A920B7BE7B00272600 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				257902AA20B7BE7B00272600 /* Router.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		257902AB20B7BE7B00272600 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				257902AC20B7BE7B00272600 /* HUD.swift */,
+				257902AD20B7BE7B00272600 /* KRActivityIndicatorView */,
+				257902B220B7BE7B00272600 /* KRProgressHUD */,
+				257902B920B7BE7B00272600 /* PageScrollView */,
+				257902BD20B7BE7B00272600 /* WebViewContainer */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		257902AD20B7BE7B00272600 /* KRActivityIndicatorView */ = {
+			isa = PBXGroup;
+			children = (
+				257902AE20B7BE7B00272600 /* Classes */,
+			);
+			path = KRActivityIndicatorView;
+			sourceTree = "<group>";
+		};
+		257902AE20B7BE7B00272600 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				257902AF20B7BE7B00272600 /* KRActivityIndicatorPath.swift */,
+				257902B020B7BE7B00272600 /* KRActivityIndicatorView.swift */,
+				257902B120B7BE7B00272600 /* KRActivityIndicatorViewStyle.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		257902B220B7BE7B00272600 /* KRProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				257902B320B7BE7B00272600 /* Classes */,
+			);
+			path = KRProgressHUD;
+			sourceTree = "<group>";
+		};
+		257902B320B7BE7B00272600 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				257902B420B7BE7B00272600 /* Extensions.swift */,
+				257902B520B7BE7B00272600 /* InnerKRProgressHUD.swift */,
+				257902B620B7BE7B00272600 /* KRProgressHUD.swift */,
+				257902B720B7BE7B00272600 /* KRProgressHUDIconType.swift */,
+				257902B820B7BE7B00272600 /* KRProgressHUDViewController.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		257902B920B7BE7B00272600 /* PageScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				257902BA20B7BE7B00272600 /* PageMenuCell.swift */,
+				257902BB20B7BE7B00272600 /* PageMenuView.swift */,
+				257902BC20B7BE7B00272600 /* PageScrollView.swift */,
+			);
+			path = PageScrollView;
+			sourceTree = "<group>";
+		};
+		257902BD20B7BE7B00272600 /* WebViewContainer */ = {
+			isa = PBXGroup;
+			children = (
+				257902BE20B7BE7B00272600 /* WebViewContainer.swift */,
+				257902BF20B7BE7B00272600 /* WebViewController.swift */,
+			);
+			path = WebViewContainer;
+			sourceTree = "<group>";
+		};
+		257902C020B7BE7B00272600 /* YPImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				257902C120B7BE7B00272600 /* Resources */,
+				257902CA20B7BE7B00272600 /* Source */,
+			);
+			path = YPImagePicker;
+			sourceTree = "<group>";
+		};
+		257902C120B7BE7B00272600 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				257902C220B7BE7B00272600 /* Assets.xcassets */,
+				257902C320B7BE7B00272600 /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		257902CA20B7BE7B00272600 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				257902CB20B7BE7B00272600 /* BottomPager */,
+				257902D020B7BE7B00272600 /* Camera */,
+				257902D720B7BE7B00272600 /* Configuration */,
+				257902DC20B7BE7B00272600 /* Crop */,
+				257902DF20B7BE7B00272600 /* Filters */,
+				257902E520B7BE7B00272600 /* Helpers */,
+				257902F220B7BE7B00272600 /* Info.plist */,
+				257902F320B7BE7B00272600 /* Library */,
+				2579030620B7BE7B00272600 /* Video */,
+				2579030920B7BE7B00272600 /* YPImagePicker.swift */,
+				2579030A20B7BE7B00272600 /* YPImagePickerHeader.h */,
+				2579030B20B7BE7B00272600 /* YPPickerVC.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		257902CB20B7BE7B00272600 /* BottomPager */ = {
+			isa = PBXGroup;
+			children = (
+				257902CC20B7BE7B00272600 /* YPBottomPager.swift */,
+				257902CD20B7BE7B00272600 /* YPBottomPagerView.swift */,
+				257902CE20B7BE7B00272600 /* YPMenuItem.swift */,
+				257902CF20B7BE7B00272600 /* YPPagerMenu.swift */,
+			);
+			path = BottomPager;
+			sourceTree = "<group>";
+		};
+		257902D020B7BE7B00272600 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				257902D120B7BE7B00272600 /* PostiOS10PhotoCapture.swift */,
+				257902D220B7BE7B00272600 /* PreiOS10PhotoCapture.swift */,
+				257902D320B7BE7B00272600 /* YPCameraVC.swift */,
+				257902D420B7BE7B00272600 /* YPCameraView.swift */,
+				257902D520B7BE7B00272600 /* YPPhotoCapture.swift */,
+				257902D620B7BE7B00272600 /* YPPhotoCaptureDefaults.swift */,
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
+		257902D720B7BE7B00272600 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				257902D820B7BE7B00272600 /* YPImagePickerConfiguration.swift */,
+				257902D920B7BE7B00272600 /* YPLibraryImageSize.swift */,
+				257902DA20B7BE7B00272600 /* YPPickerScreen.swift */,
+				257902DB20B7BE7B00272600 /* YPWordings.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		257902DC20B7BE7B00272600 /* Crop */ = {
+			isa = PBXGroup;
+			children = (
+				257902DD20B7BE7B00272600 /* YPCropVC.swift */,
+				257902DE20B7BE7B00272600 /* YPCropView.swift */,
+			);
+			path = Crop;
+			sourceTree = "<group>";
+		};
+		257902DF20B7BE7B00272600 /* Filters */ = {
+			isa = PBXGroup;
+			children = (
+				257902E020B7BE7B00272600 /* YPFilter.swift */,
+				257902E120B7BE7B00272600 /* YPFilterCollectionViewCell.swift */,
+				257902E220B7BE7B00272600 /* YPFilterPreview.swift */,
+				257902E320B7BE7B00272600 /* YPFiltersVC.swift */,
+				257902E420B7BE7B00272600 /* YPFiltersView.swift */,
+			);
+			path = Filters;
+			sourceTree = "<group>";
+		};
+		257902E520B7BE7B00272600 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				257902E620B7BE7B00272600 /* CGRect+Difference.swift */,
+				257902E720B7BE7B00272600 /* IndexSet+IndexPath.swift */,
+				257902E820B7BE7B00272600 /* PermissionCheckable.swift */,
+				257902E920B7BE7B00272600 /* PHCachingImageManager+Helpers.swift */,
+				257902EA20B7BE7B00272600 /* PHFetchResult + IndexPath.swift */,
+				257902EB20B7BE7B00272600 /* UICollectionView+IndexPath.swift */,
+				257902EC20B7BE7B00272600 /* UIImage+ResetOrientation.swift */,
+				257902ED20B7BE7B00272600 /* YPAlerts.swift */,
+				257902EE20B7BE7B00272600 /* YPDragDirection.swift */,
+				257902EF20B7BE7B00272600 /* YPHelpers.swift */,
+				257902F020B7BE7B00272600 /* YPPermissionDeniedPopup.swift */,
+				257902F120B7BE7B00272600 /* YPPhotoSaver.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		257902F320B7BE7B00272600 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				257902F420B7BE7B00272600 /* LibraryMediaManager.swift */,
+				257902F520B7BE7B00272600 /* YPAlbum.swift */,
+				257902F620B7BE7B00272600 /* YPAlbumCell.swift */,
+				257902F720B7BE7B00272600 /* YPAlbumsManager.swift */,
+				257902F820B7BE7B00272600 /* YPAlbumVC.swift */,
+				257902F920B7BE7B00272600 /* YPAlbumView.swift */,
+				257902FA20B7BE7B00272600 /* YPGridView.swift */,
+				257902FB20B7BE7B00272600 /* YPImageCropView.swift */,
+				257902FC20B7BE7B00272600 /* YPImageCropViewContainer.swift */,
+				257902FD20B7BE7B00272600 /* YPLibrary+LibraryChange.swift */,
+				257902FE20B7BE7B00272600 /* YPLibraryVC + UIHelpers.swift */,
+				257902FF20B7BE7B00272600 /* YPLibraryVC+CollectionView.swift */,
+				2579030020B7BE7B00272600 /* YPLibraryVC+PanGesture.swift */,
+				2579030120B7BE7B00272600 /* YPLibraryVC.swift */,
+				2579030220B7BE7B00272600 /* YPLibraryView.swift */,
+				2579030320B7BE7B00272600 /* YPLibraryView.xib */,
+				2579030420B7BE7B00272600 /* YPLibraryViewCell.swift */,
+				2579030520B7BE7B00272600 /* YPLibraryViewDelegate.swift */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		2579030620B7BE7B00272600 /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				2579030720B7BE7B00272600 /* YPVideoHelper.swift */,
+				2579030820B7BE7B00272600 /* YPVideoVC.swift */,
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
+		2579035820B7C01600272600 /* OCBridge */ = {
+			isa = PBXGroup;
+			children = (
+				2579035920B7C03B00272600 /* magnetX-Bridging-Header.h */,
+			);
+			path = OCBridge;
+			sourceTree = "<group>";
+		};
+		2579035A20B7D71D00272600 /* Target */ = {
+			isa = PBXGroup;
+			children = (
+				2579035B20B7D76800272600 /* MoviesTarget.swift */,
+			);
+			path = Target;
+			sourceTree = "<group>";
+		};
 		258F09D720B6A71C004256EF = {
 			isa = PBXGroup;
 			children = (
@@ -264,6 +738,11 @@
 				252758B520B6B2B000347877 /* App */,
 				252758C520B6BE5700347877 /* Classes */,
 				252758C220B6B4B900347877 /* Extension */,
+				2579029420B7B2AC00272600 /* Common */,
+				2579035A20B7D71D00272600 /* Target */,
+				2579029720B7B59300272600 /* Network */,
+				257902A420B7BE7B00272600 /* Vendor */,
+				2579035820B7C01600272600 /* OCBridge */,
 				252758B720B6B2B000347877 /* Other */,
 				258F09EA20B6A71D004256EF /* Assets.xcassets */,
 			);
@@ -322,6 +801,11 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
+				fr,
+				nl,
+				ru,
+				"zh-Hans",
 			);
 			mainGroup = 258F09D720B6A71C004256EF;
 			productRefGroup = 258F09E120B6A71C004256EF /* Products */;
@@ -338,9 +822,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2579031F20B7BE7C00272600 /* Localizable.strings in Resources */,
 				258F09EB20B6A71D004256EF /* Assets.xcassets in Resources */,
+				2579034120B7BE7C00272600 /* Info.plist in Resources */,
+				2579035120B7BE7C00272600 /* YPLibraryView.xib in Resources */,
 				252758BC20B6B2B000347877 /* LaunchScreen.storyboard in Resources */,
-				252758BD20B6B2B000347877 /* Info.plist in Resources */,
+				2579031E20B7BE7C00272600 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,16 +913,102 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2579032120B7BE7C00272600 /* YPBottomPagerView.swift in Sources */,
+				2579032020B7BE7C00272600 /* YPBottomPager.swift in Sources */,
+				2579032820B7BE7C00272600 /* YPPhotoCapture.swift in Sources */,
+				2579029620B7B2CC00272600 /* Common.swift in Sources */,
+				2579029220B7B23A00272600 /* PixelExtension.swift in Sources */,
+				2579033820B7BE7C00272600 /* PHCachingImageManager+Helpers.swift in Sources */,
+				2579035C20B7D76800272600 /* MoviesTarget.swift in Sources */,
+				2579034920B7BE7C00272600 /* YPImageCropView.swift in Sources */,
+				2579033620B7BE7C00272600 /* IndexSet+IndexPath.swift in Sources */,
+				2579034D20B7BE7C00272600 /* YPLibraryVC+CollectionView.swift in Sources */,
+				2579031520B7BE7C00272600 /* InnerKRProgressHUD.swift in Sources */,
+				2579031920B7BE7C00272600 /* PageMenuCell.swift in Sources */,
+				2579031C20B7BE7C00272600 /* WebViewContainer.swift in Sources */,
+				2579034C20B7BE7C00272600 /* YPLibraryVC + UIHelpers.swift in Sources */,
+				2579033420B7BE7C00272600 /* YPFiltersView.swift in Sources */,
+				2579035620B7BE7C00272600 /* YPImagePicker.swift in Sources */,
+				2579031220B7BE7C00272600 /* KRActivityIndicatorView.swift in Sources */,
 				252758E220B6C0D000347877 /* SearchViewController.swift in Sources */,
+				2579032C20B7BE7C00272600 /* YPPickerScreen.swift in Sources */,
+				2579034320B7BE7C00272600 /* YPAlbum.swift in Sources */,
+				2579032220B7BE7C00272600 /* YPMenuItem.swift in Sources */,
+				2579035420B7BE7C00272600 /* YPVideoHelper.swift in Sources */,
+				2579032E20B7BE7C00272600 /* YPCropVC.swift in Sources */,
+				2579033720B7BE7C00272600 /* PermissionCheckable.swift in Sources */,
+				2579034020B7BE7C00272600 /* YPPhotoSaver.swift in Sources */,
+				2579032720B7BE7C00272600 /* YPCameraView.swift in Sources */,
+				2579031620B7BE7C00272600 /* KRProgressHUD.swift in Sources */,
+				2579029320B7B23A00272600 /* StringExtension.swift in Sources */,
+				2579033B20B7BE7C00272600 /* UIImage+ResetOrientation.swift in Sources */,
+				2579033120B7BE7C00272600 /* YPFilterCollectionViewCell.swift in Sources */,
 				252758BF20B6B2E100347877 /* AppDelegat+Service.swift in Sources */,
 				252758C120B6B47F00347877 /* AppDelegate+Root.swift in Sources */,
+				2579030D20B7BE7C00272600 /* HTTPCache.swift in Sources */,
+				2579031A20B7BE7C00272600 /* PageMenuView.swift in Sources */,
+				2579035020B7BE7C00272600 /* YPLibraryView.swift in Sources */,
+				2579029E20B7B59400272600 /* HTTPResponse.swift in Sources */,
+				2579031120B7BE7C00272600 /* KRActivityIndicatorPath.swift in Sources */,
+				2579030C20B7BE7C00272600 /* HTTPActivityPlugin.swift in Sources */,
+				2579029120B7B23A00272600 /* UIScreenExtension.swift in Sources */,
+				2579032520B7BE7C00272600 /* PreiOS10PhotoCapture.swift in Sources */,
+				2579031B20B7BE7C00272600 /* PageScrollView.swift in Sources */,
+				2579033220B7BE7C00272600 /* YPFilterPreview.swift in Sources */,
+				2579033020B7BE7C00272600 /* YPFilter.swift in Sources */,
+				2579031320B7BE7C00272600 /* KRActivityIndicatorViewStyle.swift in Sources */,
+				2579029F20B7B59400272600 /* Network+Rx.swift in Sources */,
+				257902A320B7B9ED00272600 /* ResponseCode.swift in Sources */,
+				2579033C20B7BE7C00272600 /* YPAlerts.swift in Sources */,
+				2579030F20B7BE7C00272600 /* Router.swift in Sources */,
+				2579036420B80DE900272600 /* XUtils.swift in Sources */,
+				2579032320B7BE7C00272600 /* YPPagerMenu.swift in Sources */,
+				2579035320B7BE7C00272600 /* YPLibraryViewDelegate.swift in Sources */,
 				252758E020B6C0C100347877 /* RecommendViewController.swift in Sources */,
+				2579031D20B7BE7C00272600 /* WebViewController.swift in Sources */,
+				257902A120B7B59400272600 /* NetworkEnvironment.swift in Sources */,
+				2579031020B7BE7C00272600 /* HUD.swift in Sources */,
+				2579034E20B7BE7C00272600 /* YPLibraryVC+PanGesture.swift in Sources */,
+				2579034420B7BE7C00272600 /* YPAlbumCell.swift in Sources */,
+				2579032F20B7BE7C00272600 /* YPCropView.swift in Sources */,
+				2579035520B7BE7C00272600 /* YPVideoVC.swift in Sources */,
+				2579031420B7BE7C00272600 /* Extensions.swift in Sources */,
+				2579032420B7BE7C00272600 /* PostiOS10PhotoCapture.swift in Sources */,
+				2579032B20B7BE7C00272600 /* YPLibraryImageSize.swift in Sources */,
+				2579031820B7BE7C00272600 /* KRProgressHUDViewController.swift in Sources */,
+				2579033520B7BE7C00272600 /* CGRect+Difference.swift in Sources */,
+				257902A020B7B59400272600 /* Network.swift in Sources */,
+				2579033920B7BE7C00272600 /* PHFetchResult + IndexPath.swift in Sources */,
+				2579034720B7BE7C00272600 /* YPAlbumView.swift in Sources */,
+				2579028B20B7A2C600272600 /* UIImageExtension.swift in Sources */,
+				2579034B20B7BE7C00272600 /* YPLibrary+LibraryChange.swift in Sources */,
 				252758DE20B6C0AB00347877 /* PersonalViewController.swift in Sources */,
+				2579033D20B7BE7C00272600 /* YPDragDirection.swift in Sources */,
+				2579033F20B7BE7C00272600 /* YPPermissionDeniedPopup.swift in Sources */,
+				2579034A20B7BE7C00272600 /* YPImageCropViewContainer.swift in Sources */,
+				2579035720B7BE7C00272600 /* YPPickerVC.swift in Sources */,
 				252758BB20B6B2B000347877 /* AppDelegate.swift in Sources */,
+				2579034520B7BE7C00272600 /* YPAlbumsManager.swift in Sources */,
+				2579034F20B7BE7C00272600 /* YPLibraryVC.swift in Sources */,
+				2579032A20B7BE7C00272600 /* YPImagePickerConfiguration.swift in Sources */,
 				252758C420B6BDB700347877 /* UIColorExtension.swift in Sources */,
+				2579034620B7BE7C00272600 /* YPAlbumVC.swift in Sources */,
+				2579034220B7BE7C00272600 /* LibraryMediaManager.swift in Sources */,
 				252758C920B6BE6800347877 /* MainViewController.swift in Sources */,
+				2579031720B7BE7C00272600 /* KRProgressHUDIconType.swift in Sources */,
+				2579028D20B7B01F00272600 /* PopularModel.swift in Sources */,
+				2579034820B7BE7C00272600 /* YPGridView.swift in Sources */,
+				2579035220B7BE7C00272600 /* YPLibraryViewCell.swift in Sources */,
+				2579032D20B7BE7C00272600 /* YPWordings.swift in Sources */,
 				252758DC20B6BFF200347877 /* UIViewControllerExtension.swift in Sources */,
+				2579032620B7BE7C00272600 /* YPCameraVC.swift in Sources */,
+				2579033A20B7BE7C00272600 /* UICollectionView+IndexPath.swift in Sources */,
+				2579029D20B7B59400272600 /* Data+HandyJSON.swift in Sources */,
 				252758DA20B6BFD000347877 /* BaseViewController.swift in Sources */,
+				2579032920B7BE7C00272600 /* YPPhotoCaptureDefaults.swift in Sources */,
+				2579030E20B7BE7C00272600 /* HTTPLoggerPlugin.swift in Sources */,
+				2579033E20B7BE7C00272600 /* YPHelpers.swift in Sources */,
+				2579033320B7BE7C00272600 /* YPFiltersVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,6 +1021,19 @@
 				252758B920B6B2B000347877 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		257902C320B7BE7B00272600 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				257902C420B7BE7B00272600 /* en */,
+				257902C520B7BE7B00272600 /* es */,
+				257902C620B7BE7B00272600 /* fr */,
+				257902C720B7BE7B00272600 /* nl */,
+				257902C820B7BE7B00272600 /* ru */,
+				257902C920B7BE7B00272600 /* zh-Hans */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -574,17 +1160,28 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QC2G2Y59YZ;
 				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/magnetX/Other/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = hsuyelin.magnetX;
+				PRODUCT_BUNDLE_IDENTIFIER = hsuyelin.magnetXD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/magnetX/OCBridge/magnetX-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				WARNING_CFLAGS = (
+					"-Wno-nonnull",
+					"-Wno-shadow",
+					"-Wno-comma",
+					"-Wno-unguarded-availability",
+					"-Wno-deprecated-declarations",
+					"-Wno-incomplete-umbrella",
+					"-Wno-objc-protocol-method-implementation",
+				);
 			};
 			name = Debug;
 		};
@@ -595,17 +1192,28 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QC2G2Y59YZ;
 				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/magnetX/Other/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = hsuyelin.magnetX;
+				PRODUCT_BUNDLE_IDENTIFIER = hsuyelin.magnetXD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/magnetX/OCBridge/magnetX-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				WARNING_CFLAGS = (
+					"-Wno-nonnull",
+					"-Wno-shadow",
+					"-Wno-comma",
+					"-Wno-unguarded-availability",
+					"-Wno-deprecated-declarations",
+					"-Wno-incomplete-umbrella",
+					"-Wno-objc-protocol-method-implementation",
+				);
 			};
 			name = Release;
 		};

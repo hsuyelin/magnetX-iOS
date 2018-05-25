@@ -43,7 +43,7 @@ class BaseViewController: UIViewController {
         navigation.bar.isTranslucent = false
         navigation.bar.shadowImage = UIImage()
         navigation.bar.titleTextAttributes = [.foregroundColor: UIColor.white, .font: UIFont.systemFont(ofSize: 18)]
-        navigation.item.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "default_back"), style: .plain, target: self, action: #selector(backBarButtonAction))
+        navigation.item.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "nav_back_white").originalImage, style: .plain, target: self, action: #selector(backBarButtonAction))
     }
     
     @objc private func backBarButtonAction() {
