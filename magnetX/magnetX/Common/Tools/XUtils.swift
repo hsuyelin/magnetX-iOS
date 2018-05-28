@@ -21,3 +21,11 @@ class XUtils {
         }
     }
 }
+
+public let YL_IS_IPHONEX = UIScreen.instancesRespond(to:#selector(getter: UIScreen.main.currentMode)) ? __CGSizeEqualToSize(CGSize(width:1125, height:2436), (UIScreen.main.currentMode?.size)!) : false
+
+public let yl_statusBarHeight = UIApplication.shared.statusBarFrame.size.height
+public let yl_navHeight = 44.0
+public let yl_navWithStatusBarHeight = yl_statusBarHeight + CGFloat(yl_navHeight)
+
+

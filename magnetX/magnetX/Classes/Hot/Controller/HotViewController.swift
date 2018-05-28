@@ -31,7 +31,6 @@ class HotViewController: BaseViewController {
         layout.bottomLineColor = UIColor.selected
         layout.pageBottomLineColor = UIColor(r: 230.0, g: 230.0, b: 230.0)
         layout.scale = 1.08
-        layout.sliderHeight = 45.0
         layout.isAverage = true
         return layout
     }()

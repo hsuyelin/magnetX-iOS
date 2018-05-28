@@ -21,12 +21,16 @@
 		2555D7B920BB8F6500CC010F /* HotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2555D7B820BB8F6500CC010F /* HotViewController.swift */; };
 		2555D7C820BBC9AD00CC010F /* NowPlayingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2555D7C720BBC9AD00CC010F /* NowPlayingViewController.swift */; };
 		2555D7CA20BBC9C400CC010F /* UpComingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2555D7C920BBC9C400CC010F /* UpComingViewController.swift */; };
+		2555D7CE20BBE90C00CC010F /* BounceTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2555D7CD20BBE90C00CC010F /* BounceTabBar.swift */; };
+		2555D7D120BBEEA300CC010F /* SwiftyStarRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2555D7D020BBEEA300CC010F /* SwiftyStarRatingView.swift */; };
+		2555D7D620BBF0A500CC010F /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2555D7D420BBF0A500CC010F /* Common.swift */; };
+		2555D7D720BBF0A500CC010F /* XUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2555D7D520BBF0A500CC010F /* XUtils.swift */; };
+		2555D7D920BBF0B700CC010F /* CommonMovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2555D7D820BBF0B700CC010F /* CommonMovieCell.swift */; };
 		2579028B20B7A2C600272600 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2579028A20B7A2C600272600 /* UIImageExtension.swift */; };
 		2579028D20B7B01F00272600 /* PopularModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2579028C20B7B01F00272600 /* PopularModel.swift */; };
 		2579029120B7B23A00272600 /* UIScreenExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2579028E20B7B23A00272600 /* UIScreenExtension.swift */; };
 		2579029220B7B23A00272600 /* PixelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2579028F20B7B23A00272600 /* PixelExtension.swift */; };
 		2579029320B7B23A00272600 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2579029020B7B23A00272600 /* StringExtension.swift */; };
-		2579029620B7B2CC00272600 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2579029520B7B2CC00272600 /* Common.swift */; };
 		2579029D20B7B59400272600 /* Data+HandyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2579029820B7B59300272600 /* Data+HandyJSON.swift */; };
 		2579029E20B7B59400272600 /* HTTPResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2579029920B7B59300272600 /* HTTPResponse.swift */; };
 		2579029F20B7B59400272600 /* Network+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2579029A20B7B59300272600 /* Network+Rx.swift */; };
@@ -110,8 +114,8 @@
 		2579035620B7BE7C00272600 /* YPImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2579030920B7BE7B00272600 /* YPImagePicker.swift */; };
 		2579035720B7BE7C00272600 /* YPPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2579030B20B7BE7B00272600 /* YPPickerVC.swift */; };
 		2579035C20B7D76800272600 /* MoviesTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2579035B20B7D76800272600 /* MoviesTarget.swift */; };
-		2579036420B80DE900272600 /* XUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2579036320B80DE900272600 /* XUtils.swift */; };
 		258F09EB20B6A71D004256EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 258F09EA20B6A71D004256EF /* Assets.xcassets */; };
+		25E178F620BBF9FB00720673 /* UIImageColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E178F520BBF9FB00720673 /* UIImageColors.swift */; };
 		2892E8EDB65262D04C0C20F4 /* Pods_magnetX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAE5AD0089BEF84A2A4E36F7 /* Pods_magnetX.framework */; };
 /* End PBXBuildFile section */
 
@@ -131,12 +135,16 @@
 		2555D7B820BB8F6500CC010F /* HotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotViewController.swift; sourceTree = "<group>"; };
 		2555D7C720BBC9AD00CC010F /* NowPlayingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingViewController.swift; sourceTree = "<group>"; };
 		2555D7C920BBC9C400CC010F /* UpComingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpComingViewController.swift; sourceTree = "<group>"; };
+		2555D7CD20BBE90C00CC010F /* BounceTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BounceTabBar.swift; sourceTree = "<group>"; };
+		2555D7D020BBEEA300CC010F /* SwiftyStarRatingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyStarRatingView.swift; sourceTree = "<group>"; };
+		2555D7D420BBF0A500CC010F /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		2555D7D520BBF0A500CC010F /* XUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XUtils.swift; sourceTree = "<group>"; };
+		2555D7D820BBF0B700CC010F /* CommonMovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonMovieCell.swift; sourceTree = "<group>"; };
 		2579028A20B7A2C600272600 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		2579028C20B7B01F00272600 /* PopularModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularModel.swift; sourceTree = "<group>"; };
 		2579028E20B7B23A00272600 /* UIScreenExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIScreenExtension.swift; sourceTree = "<group>"; };
 		2579028F20B7B23A00272600 /* PixelExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PixelExtension.swift; sourceTree = "<group>"; };
 		2579029020B7B23A00272600 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
-		2579029520B7B2CC00272600 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		2579029820B7B59300272600 /* Data+HandyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+HandyJSON.swift"; sourceTree = "<group>"; };
 		2579029920B7B59300272600 /* HTTPResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPResponse.swift; sourceTree = "<group>"; };
 		2579029A20B7B59300272600 /* Network+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Network+Rx.swift"; sourceTree = "<group>"; };
@@ -227,9 +235,10 @@
 		2579030B20B7BE7B00272600 /* YPPickerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPPickerVC.swift; sourceTree = "<group>"; };
 		2579035920B7C03B00272600 /* magnetX-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "magnetX-Bridging-Header.h"; sourceTree = "<group>"; };
 		2579035B20B7D76800272600 /* MoviesTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTarget.swift; sourceTree = "<group>"; };
-		2579036320B80DE900272600 /* XUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XUtils.swift; sourceTree = "<group>"; };
 		258F09E020B6A71C004256EF /* magnetX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = magnetX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		258F09EA20B6A71D004256EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		25E178F420BBF9FB00720673 /* UIImageColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageColors.h; sourceTree = "<group>"; };
+		25E178F520BBF9FB00720673 /* UIImageColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageColors.swift; sourceTree = "<group>"; };
 		3AF93A1D4E4CAE38E95B98C0 /* Pods-magnetX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-magnetX.release.xcconfig"; path = "Pods/Target Support Files/Pods-magnetX/Pods-magnetX.release.xcconfig"; sourceTree = "<group>"; };
 		793B842B83B43925AAEC4A63 /* Pods-magnetX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-magnetX.debug.xcconfig"; path = "Pods/Target Support Files/Pods-magnetX/Pods-magnetX.debug.xcconfig"; sourceTree = "<group>"; };
 		FAE5AD0089BEF84A2A4E36F7 /* Pods_magnetX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_magnetX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -313,6 +322,7 @@
 			isa = PBXGroup;
 			children = (
 				252758C820B6BE6800347877 /* MainViewController.swift */,
+				2555D7CD20BBE90C00CC010F /* BounceTabBar.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -568,11 +578,36 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		2555D7CF20BBEEA300CC010F /* SwiftyStarRatingView */ = {
+			isa = PBXGroup;
+			children = (
+				2555D7D020BBEEA300CC010F /* SwiftyStarRatingView.swift */,
+			);
+			path = SwiftyStarRatingView;
+			sourceTree = "<group>";
+		};
+		2555D7D220BBF0A500CC010F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2555D7D820BBF0B700CC010F /* CommonMovieCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2555D7D320BBF0A500CC010F /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				2555D7D420BBF0A500CC010F /* Common.swift */,
+				2555D7D520BBF0A500CC010F /* XUtils.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
 		2579029420B7B2AC00272600 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				2579029520B7B2CC00272600 /* Common.swift */,
-				2579036320B80DE900272600 /* XUtils.swift */,
+				2555D7D320BBF0A500CC010F /* Tools */,
+				2555D7D220BBF0A500CC010F /* View */,
 			);
 			name = Common;
 			path = magnetX/Common;
@@ -624,6 +659,8 @@
 			isa = PBXGroup;
 			children = (
 				257902AC20B7BE7B00272600 /* HUD.swift */,
+				25E178F320BBF9FB00720673 /* UIImageColors */,
+				2555D7CF20BBEEA300CC010F /* SwiftyStarRatingView */,
 				257902AD20B7BE7B00272600 /* KRActivityIndicatorView */,
 				257902B220B7BE7B00272600 /* KRProgressHUD */,
 				257902B920B7BE7B00272600 /* PageScrollView */,
@@ -886,6 +923,15 @@
 			path = magnetX;
 			sourceTree = "<group>";
 		};
+		25E178F320BBF9FB00720673 /* UIImageColors */ = {
+			isa = PBXGroup;
+			children = (
+				25E178F420BBF9FB00720673 /* UIImageColors.h */,
+				25E178F520BBF9FB00720673 /* UIImageColors.swift */,
+			);
+			path = UIImageColors;
+			sourceTree = "<group>";
+		};
 		E2E938FB4279700D08D1DF82 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1055,7 +1101,7 @@
 				2579032120B7BE7C00272600 /* YPBottomPagerView.swift in Sources */,
 				2579032020B7BE7C00272600 /* YPBottomPager.swift in Sources */,
 				2579032820B7BE7C00272600 /* YPPhotoCapture.swift in Sources */,
-				2579029620B7B2CC00272600 /* Common.swift in Sources */,
+				2555D7D720BBF0A500CC010F /* XUtils.swift in Sources */,
 				2579029220B7B23A00272600 /* PixelExtension.swift in Sources */,
 				2579033820B7BE7C00272600 /* PHCachingImageManager+Helpers.swift in Sources */,
 				2579035C20B7D76800272600 /* MoviesTarget.swift in Sources */,
@@ -1101,7 +1147,6 @@
 				257902A320B7B9ED00272600 /* ResponseCode.swift in Sources */,
 				2579033C20B7BE7C00272600 /* YPAlerts.swift in Sources */,
 				2579030F20B7BE7C00272600 /* Router.swift in Sources */,
-				2579036420B80DE900272600 /* XUtils.swift in Sources */,
 				2579032320B7BE7C00272600 /* YPPagerMenu.swift in Sources */,
 				2579035320B7BE7C00272600 /* YPLibraryViewDelegate.swift in Sources */,
 				252758E020B6C0C100347877 /* RecommendViewController.swift in Sources */,
@@ -1109,6 +1154,7 @@
 				257902A120B7B59400272600 /* NetworkEnvironment.swift in Sources */,
 				2579031020B7BE7C00272600 /* HUD.swift in Sources */,
 				2579034E20B7BE7C00272600 /* YPLibraryVC+PanGesture.swift in Sources */,
+				2555D7D120BBEEA300CC010F /* SwiftyStarRatingView.swift in Sources */,
 				2579034420B7BE7C00272600 /* YPAlbumCell.swift in Sources */,
 				2579032F20B7BE7C00272600 /* YPCropView.swift in Sources */,
 				2579035520B7BE7C00272600 /* YPVideoVC.swift in Sources */,
@@ -1121,12 +1167,14 @@
 				2579033920B7BE7C00272600 /* PHFetchResult + IndexPath.swift in Sources */,
 				2555D7CA20BBC9C400CC010F /* UpComingViewController.swift in Sources */,
 				2579034720B7BE7C00272600 /* YPAlbumView.swift in Sources */,
+				2555D7D920BBF0B700CC010F /* CommonMovieCell.swift in Sources */,
 				2579028B20B7A2C600272600 /* UIImageExtension.swift in Sources */,
 				2579034B20B7BE7C00272600 /* YPLibrary+LibraryChange.swift in Sources */,
 				252758DE20B6C0AB00347877 /* PersonalViewController.swift in Sources */,
 				2579033D20B7BE7C00272600 /* YPDragDirection.swift in Sources */,
 				2579033F20B7BE7C00272600 /* YPPermissionDeniedPopup.swift in Sources */,
 				2579034A20B7BE7C00272600 /* YPImageCropViewContainer.swift in Sources */,
+				25E178F620BBF9FB00720673 /* UIImageColors.swift in Sources */,
 				2579035720B7BE7C00272600 /* YPPickerVC.swift in Sources */,
 				252758BB20B6B2B000347877 /* AppDelegate.swift in Sources */,
 				2579034520B7BE7C00272600 /* YPAlbumsManager.swift in Sources */,
@@ -1141,10 +1189,12 @@
 				2579028D20B7B01F00272600 /* PopularModel.swift in Sources */,
 				2579034820B7BE7C00272600 /* YPGridView.swift in Sources */,
 				2579035220B7BE7C00272600 /* YPLibraryViewCell.swift in Sources */,
+				2555D7D620BBF0A500CC010F /* Common.swift in Sources */,
 				2579032D20B7BE7C00272600 /* YPWordings.swift in Sources */,
 				252758DC20B6BFF200347877 /* UIViewControllerExtension.swift in Sources */,
 				2579032620B7BE7C00272600 /* YPCameraVC.swift in Sources */,
 				2579033A20B7BE7C00272600 /* UICollectionView+IndexPath.swift in Sources */,
+				2555D7CE20BBE90C00CC010F /* BounceTabBar.swift in Sources */,
 				2579029D20B7B59400272600 /* Data+HandyJSON.swift in Sources */,
 				252758DA20B6BFD000347877 /* BaseViewController.swift in Sources */,
 				2579032920B7BE7C00272600 /* YPPhotoCaptureDefaults.swift in Sources */,
