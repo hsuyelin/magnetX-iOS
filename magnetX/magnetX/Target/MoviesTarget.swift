@@ -9,7 +9,9 @@
 import Moya
 
 enum MoviesTarget {
-    case getPopular
+    case getPopular(pageIndex: Int)
+    case nowPlaying(pageIndex: Int)
+    case upComing(pageIndex: Int)
 }
 
 extension MoviesTarget: TargetType {
@@ -18,13 +20,21 @@ extension MoviesTarget: TargetType {
         switch self {
         case .getPopular:
             return "/popular"
+        case .nowPlaying:
+            return "/now_playing"
+        case .upComing:
+            return "/upcoming"
         }
     }
     
     var task: Task {
         switch self {
-        case .getPopular:
-            return .requestParameters(parameters: ["page": 1], encoding: URLEncoding.default)
+        case .getPopular(let pageIndex):
+            return .requestParameters(parameters: ["page": pageIndex], encoding: URLEncoding.default)
+        case .nowPlaying(let pageIndex):
+            return .requestParameters(parameters: ["page": pageIndex], encoding: URLEncoding.default)
+        case .upComing(let pageIndex):
+            return .requestParameters(parameters: ["page": pageIndex], encoding: URLEncoding.default)
         }
     }
 }

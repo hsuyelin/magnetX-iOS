@@ -29,7 +29,7 @@ class RecommendViewController: BaseViewController {
     }
     
     private func test() {
-        MoviesTarget.getPopular.request(cache: { (response: HTTPResponse<[PopularModel]>) in
+        MoviesTarget.getPopular(pageIndex: 1).request(cache: { (response: HTTPResponse<[PopularModel]>) in
         }, success: { (response: HTTPResponse<[PopularModel]>) in
             if response.success {
                 debugPrint("success")
