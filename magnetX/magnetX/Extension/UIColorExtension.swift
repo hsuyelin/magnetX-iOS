@@ -36,4 +36,14 @@ public extension UIColor {
     class var global: UIColor {
         return UIColor(hex: "#2C2D31")
     }
+    
+    /// #858585
+    class var normal: UIColor {
+        return UIColor(hex: "#858585")
+    }
+    
+    /// #383838
+    class var selected: UIColor {
+        return UIColor(hex: "#383838")
+    }
 }

@@ -18,6 +18,9 @@
 		252758DE20B6C0AB00347877 /* PersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252758DD20B6C0AB00347877 /* PersonalViewController.swift */; };
 		252758E020B6C0C100347877 /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252758DF20B6C0C100347877 /* RecommendViewController.swift */; };
 		252758E220B6C0D000347877 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252758E120B6C0D000347877 /* SearchViewController.swift */; };
+		2555D7B920BB8F6500CC010F /* HotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2555D7B820BB8F6500CC010F /* HotViewController.swift */; };
+		2555D7C820BBC9AD00CC010F /* NowPlayingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2555D7C720BBC9AD00CC010F /* NowPlayingViewController.swift */; };
+		2555D7CA20BBC9C400CC010F /* UpComingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2555D7C920BBC9C400CC010F /* UpComingViewController.swift */; };
 		2579028B20B7A2C600272600 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2579028A20B7A2C600272600 /* UIImageExtension.swift */; };
 		2579028D20B7B01F00272600 /* PopularModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2579028C20B7B01F00272600 /* PopularModel.swift */; };
 		2579029120B7B23A00272600 /* UIScreenExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2579028E20B7B23A00272600 /* UIScreenExtension.swift */; };
@@ -125,6 +128,9 @@
 		252758DD20B6C0AB00347877 /* PersonalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalViewController.swift; sourceTree = "<group>"; };
 		252758DF20B6C0C100347877 /* RecommendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
 		252758E120B6C0D000347877 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		2555D7B820BB8F6500CC010F /* HotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotViewController.swift; sourceTree = "<group>"; };
+		2555D7C720BBC9AD00CC010F /* NowPlayingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingViewController.swift; sourceTree = "<group>"; };
+		2555D7C920BBC9C400CC010F /* UpComingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpComingViewController.swift; sourceTree = "<group>"; };
 		2579028A20B7A2C600272600 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		2579028C20B7B01F00272600 /* PopularModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularModel.swift; sourceTree = "<group>"; };
 		2579028E20B7B23A00272600 /* UIScreenExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIScreenExtension.swift; sourceTree = "<group>"; };
@@ -287,6 +293,7 @@
 			children = (
 				252758C720B6BE5700347877 /* Main */,
 				252758C620B6BE5700347877 /* Base */,
+				2555D7B320BB8F5700CC010F /* Hot */,
 				252758CA20B6BF8700347877 /* Recommend */,
 				252758CF20B6BF8700347877 /* Search */,
 				252758D420B6BF8700347877 /* Personal */,
@@ -425,6 +432,136 @@
 			sourceTree = "<group>";
 		};
 		252758D820B6BF8700347877 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2555D7B320BB8F5700CC010F /* Hot */ = {
+			isa = PBXGroup;
+			children = (
+				2555D7B420BB8F5700CC010F /* Controller */,
+				2555D7BC20BBA9C700CC010F /* Feature */,
+				2555D7B520BB8F5700CC010F /* Model */,
+				2555D7B620BB8F5700CC010F /* View */,
+				2555D7B720BB8F5700CC010F /* ViewModel */,
+			);
+			path = Hot;
+			sourceTree = "<group>";
+		};
+		2555D7B420BB8F5700CC010F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2555D7B820BB8F6500CC010F /* HotViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2555D7B520BB8F5700CC010F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2555D7B620BB8F5700CC010F /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2555D7B720BB8F5700CC010F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2555D7BC20BBA9C700CC010F /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				2555D7BD20BBAA5400CC010F /* NowPlaying */,
+				2555D7C220BBAA5400CC010F /* UpComing */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		2555D7BD20BBAA5400CC010F /* NowPlaying */ = {
+			isa = PBXGroup;
+			children = (
+				2555D7BE20BBAA5400CC010F /* Controller */,
+				2555D7BF20BBAA5400CC010F /* Model */,
+				2555D7C020BBAA5400CC010F /* View */,
+				2555D7C120BBAA5400CC010F /* ViewModel */,
+			);
+			path = NowPlaying;
+			sourceTree = "<group>";
+		};
+		2555D7BE20BBAA5400CC010F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2555D7C720BBC9AD00CC010F /* NowPlayingViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2555D7BF20BBAA5400CC010F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2555D7C020BBAA5400CC010F /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2555D7C120BBAA5400CC010F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2555D7C220BBAA5400CC010F /* UpComing */ = {
+			isa = PBXGroup;
+			children = (
+				2555D7C320BBAA5400CC010F /* Controller */,
+				2555D7C420BBAA5400CC010F /* Model */,
+				2555D7C520BBAA5400CC010F /* View */,
+				2555D7C620BBAA5400CC010F /* ViewModel */,
+			);
+			path = UpComing;
+			sourceTree = "<group>";
+		};
+		2555D7C320BBAA5400CC010F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2555D7C920BBC9C400CC010F /* UpComingViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2555D7C420BBAA5400CC010F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2555D7C520BBAA5400CC010F /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2555D7C620BBAA5400CC010F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -867,6 +1004,7 @@
 				"${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/LTScrollView/LTScrollView.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Ono/Ono.framework",
@@ -889,6 +1027,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LTScrollView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Ono.framework",
@@ -930,6 +1069,7 @@
 				2579033420B7BE7C00272600 /* YPFiltersView.swift in Sources */,
 				2579035620B7BE7C00272600 /* YPImagePicker.swift in Sources */,
 				2579031220B7BE7C00272600 /* KRActivityIndicatorView.swift in Sources */,
+				2555D7B920BB8F6500CC010F /* HotViewController.swift in Sources */,
 				252758E220B6C0D000347877 /* SearchViewController.swift in Sources */,
 				2579032C20B7BE7C00272600 /* YPPickerScreen.swift in Sources */,
 				2579034320B7BE7C00272600 /* YPAlbum.swift in Sources */,
@@ -979,6 +1119,7 @@
 				2579033520B7BE7C00272600 /* CGRect+Difference.swift in Sources */,
 				257902A020B7B59400272600 /* Network.swift in Sources */,
 				2579033920B7BE7C00272600 /* PHFetchResult + IndexPath.swift in Sources */,
+				2555D7CA20BBC9C400CC010F /* UpComingViewController.swift in Sources */,
 				2579034720B7BE7C00272600 /* YPAlbumView.swift in Sources */,
 				2579028B20B7A2C600272600 /* UIImageExtension.swift in Sources */,
 				2579034B20B7BE7C00272600 /* YPLibrary+LibraryChange.swift in Sources */,
@@ -992,6 +1133,7 @@
 				2579034F20B7BE7C00272600 /* YPLibraryVC.swift in Sources */,
 				2579032A20B7BE7C00272600 /* YPImagePickerConfiguration.swift in Sources */,
 				252758C420B6BDB700347877 /* UIColorExtension.swift in Sources */,
+				2555D7C820BBC9AD00CC010F /* NowPlayingViewController.swift in Sources */,
 				2579034620B7BE7C00272600 /* YPAlbumVC.swift in Sources */,
 				2579034220B7BE7C00272600 /* LibraryMediaManager.swift in Sources */,
 				252758C920B6BE6800347877 /* MainViewController.swift in Sources */,

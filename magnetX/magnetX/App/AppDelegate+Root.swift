@@ -16,7 +16,7 @@ extension AppDelegate: UITabBarControllerDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.backgroundColor = UIColor.white
         let mainVC = MainViewController()
-        mainVC.tabBar.tintColor = UIColor(hex: "09BB07")
+        mainVC.tabBar.tintColor = UIColor.selected
         mainVC.delegate = self
         window?.rootViewController = mainVC
         window?.makeKeyAndVisible()

@@ -21,5 +21,6 @@ target 'magnetX' do
   pod 'RxDataSources'
   pod 'SteviaLayout'
   pod 'Ono'
+  pod 'LTScrollView'
 
 end

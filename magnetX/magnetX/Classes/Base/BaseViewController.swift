@@ -22,8 +22,8 @@ class BaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = UIColor.white
-        configureNavigationBar()
+        configBaseUIConfig()
+        configureBaseNavigationBar()
     }
     
     deinit {
@@ -37,7 +37,11 @@ class BaseViewController: UIViewController {
     }
     
     // MARK: - private
-    private func configureNavigationBar() {
+    private func configBaseUIConfig() {
+        view.backgroundColor = UIColor(hex: "#F7F7F7")
+    }
+    
+    private func configureBaseNavigationBar() {
         navigation.bar.backgroundColor = UIColor.global
         navigation.bar.tintColor = UIColor.white
         navigation.bar.isTranslucent = false

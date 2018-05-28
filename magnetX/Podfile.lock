@@ -7,6 +7,7 @@ PODS:
   - HandyJSON (4.1.1)
   - IQKeyboardManagerSwift (6.0.3)
   - Kingfisher (4.8.0)
+  - LTScrollView (0.1.5)
   - MJRefresh (3.1.15.3)
   - Moya/Core (11.0.2):
     - Alamofire (~> 4.1)
@@ -38,6 +39,7 @@ DEPENDENCIES:
   - HandyJSON (~> 4.1.1)
   - IQKeyboardManagerSwift
   - Kingfisher
+  - LTScrollView
   - MJRefresh
   - Moya/RxSwift
   - Ono
@@ -59,6 +61,7 @@ SPEC REPOS:
     - HandyJSON
     - IQKeyboardManagerSwift
     - Kingfisher
+    - LTScrollView
     - MJRefresh
     - Moya
     - Ono
@@ -80,6 +83,7 @@ SPEC CHECKSUMS:
   HandyJSON: 3a3de917c4118767ffe41c29b5acba23409649f4
   IQKeyboardManagerSwift: 04e8679f85e496bb2c474eeb9284052f1b3c391c
   Kingfisher: 976d828df2b24834c6a3f2fc4d82cdbd26552be1
+  LTScrollView: e0eaae134bba74a9018cd22ba5e07bdb155340c0
   MJRefresh: b48380ae2b927b46c4ef000de9adb8dc748e1df7
   Moya: a725035953bc1c0eb1be505ab903984501d82440
   Ono: e6d825e80ec73325e6d872ae4f2304f7378acb0e
@@ -92,6 +96,6 @@ SPEC CHECKSUMS:
   WCDB.swift: 5bb038bc5bb46067cccc7c48392e8f4c4a15def0
   WKWebViewJavascriptBridge: 8da532409bc489ba2c0a69cf38e5d1cd49e3d5e4
 
-PODFILE CHECKSUM: 00380c7015f92d40678a1e58c7c862fadf145c48
+PODFILE CHECKSUM: 95416e9f95dda791888a605ca47bae54aaf08270
 
 COCOAPODS: 1.5.2
