@@ -14,7 +14,7 @@ final class HUD {
     
     @discardableResult
     static func configure() -> KRProgressHUD.Type {
-        KRProgressHUD.resetStyles().set(font: UIFont.systemFont(ofSize: 15)).set(style: .custom(background: UIColor.white, text: UIColor.darkText, icon: nil)).set(cornerRadius: 5)
+        KRProgressHUD.resetStyles().set(font: UIFont.systemFont(ofSize: 15)).set(style: KRProgressHUDStyle.black).set(cornerRadius: 5).set(activityIndicatorViewStyle: KRActivityIndicatorViewStyle.color(UIColor.init(white: 1.0, alpha: 0.8)))
         return KRProgressHUD.self
     }
     
@@ -47,12 +47,15 @@ final class HUD {
             HUD.showInfo("服务器异常")
             return
         }
-        KRProgressHUD.resetStyles().set(font: UIFont.systemFont(ofSize: 15)).set(deadlineTime: 1.8).set(style: .custom(background: UIColor.black.alpha(0.45), text: UIColor.white, icon: nil)).set(viewOffset: 240.rpx).set(cornerRadius: 25).set(maskType: .clear).showMessage("网络异常，请检查您的网络")
+        
+//        KRProgressHUD.resetStyles().set(font: UIFont.systemFont(ofSize: 15)).set(deadlineTime: 1.8).set(style: .custom(background: UIColor.black.alpha(0.45), text: UIColor.white, icon: nil)).set(viewOffset: 240.rpx).set(cornerRadius: 25).set(maskType: .clear).showMessage("网络异常，请检查您的网络")
+        
+        KRProgressHUD.showMessage("网络异常，请检查您的网络")
     }
     
-    static func showSignInSuccess(_ image: UIImage) {
-        let mAttrText = NSMutableAttributedString(string: "签到成功，+5 积分")
-        mAttrText.addAttributes([.foregroundColor: UIColor(hex: "D4A443"), .font: UIFont.systemFont(ofSize: 18)], range: NSMakeRange(5, 2))
-        HUD.configure().set(contents: image.cgImage).set(size: CGSize(width: 240.wpx, height: 160.rpx)).set(font: UIFont.systemFont(ofSize: 16)).shared.show(withMessage: "", attributedText: mAttrText, isOnlyText: true)
-    }
+//    static func showSignInSuccess(_ image: UIImage) {
+//        let mAttrText = NSMutableAttributedString(string: "签到成功，+5 积分")
+//        mAttrText.addAttributes([.foregroundColor: UIColor(hex: "D4A443"), .font: UIFont.systemFont(ofSize: 18)], range: NSMakeRange(5, 2))
+//        HUD.configure().set(contents: image.cgImage).set(size: CGSize(width: 240.wpx, height: 160.rpx)).set(font: UIFont.systemFont(ofSize: 16)).shared.show(withMessage: "", attributedText: mAttrText, isOnlyText: true)
+//    }
 }

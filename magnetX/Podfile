@@ -3,23 +3,19 @@ platform :ios, '9.0'
 target 'magnetX' do
   
   use_frameworks!
-
-  pod 'Alamofire'
-  pod 'Moya/RxSwift'
+  
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  pod 'RxNetwork'
+  pod 'RxDataSources'
   pod 'Kingfisher'
   pod 'SnapKit'
-  pod 'HandyJSON', '~> 4.1.1'
   pod 'EachNavigationBar'
-  pod 'FDFullscreenPopGesture'
   pod 'FSPagerView'
   pod 'WCDB.swift'
   pod 'WKWebViewJavascriptBridge'
   pod 'IQKeyboardManagerSwift'
   pod 'MJRefresh'
-  pod 'RxSwift'
-  pod 'RxCocoa'
-  pod 'RxDataSources'
-  pod 'SteviaLayout'
   pod 'Ono'
   pod 'LTScrollView'
 

@@ -1,18 +1,18 @@
 //
-//  PopularModel.swift
+//  CommonMovieModel.swift
 //  magnetX
 //
-//  Created by hsuyelin on 2018/5/25.
+//  Created by hsuyelin on 2018/5/29.
 //  Copyright © 2018年 hsuyelin. All rights reserved.
 //
 
 import Foundation
 
-/// 时下最流行的电影
-struct PopularModel: Codable {
+struct CommonMovieModel: Codable {
     var vote_count: String?
     var id: String?
     var video: Bool?
+    var vote_average: String?
     var title: String?
     var popularity: String?
     var poster_path: String?

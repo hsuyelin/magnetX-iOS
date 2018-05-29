@@ -13,7 +13,7 @@ import EachNavigationBar
 
 class BaseViewController: UIViewController {
     
-    let disposeBag = DisposeBag()
+    let baseDisposeBag = DisposeBag()
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent

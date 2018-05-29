@@ -8,14 +8,17 @@
 
 import UIKit
 import Foundation
+import RxNetwork
+import Moya
 
 class RecommendViewController: BaseViewController {
+    
+    private let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupNavigationItem()
-        test()
     }
     
     override func didReceiveMemoryWarning() {
@@ -26,16 +29,5 @@ class RecommendViewController: BaseViewController {
     private func setupNavigationItem() {
         navigation.item.leftBarButtonItem = nil
         navigation.item.title = "推荐"
-    }
-    
-    private func test() {
-        MoviesTarget.getPopular(pageIndex: 1).request(cache: { (response: HTTPResponse<[PopularModel]>) in
-        }, success: { (response: HTTPResponse<[PopularModel]>) in
-            if response.success {
-                debugPrint("success")
-            }
-        }) { _ in
-            
-        }
     }
 }

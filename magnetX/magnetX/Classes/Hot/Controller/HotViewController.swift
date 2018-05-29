@@ -13,8 +13,8 @@ import LTScrollView
 class HotViewController: BaseViewController {
     
     private lazy var viewControllers: [UIViewController] = {
-        let nowPlayingVC = NowPlayingViewController()
-        let upComingVC = UpComingViewController()
+        let nowPlayingVC = HotChildViewController(hotType: .nowPlaying)
+        let upComingVC = HotChildViewController(hotType: .upComing)
         return [nowPlayingVC, upComingVC]
     }()
     
@@ -72,8 +72,8 @@ extension HotViewController: LTAdvancedScrollViewDelegate {
 
     private func pageManagerConfig() {
         /// MARK: pageView点击事件
-        pageView.advancedDidSelectIndexHandle = {
-            print("选中了 -> \($0)")
-        }
+//        pageView.advancedDidSelectIndexHandle = {
+//            print("选中了 -> \($0)")
+//        }
     }
 }

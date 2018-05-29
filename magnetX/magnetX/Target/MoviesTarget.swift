@@ -19,11 +19,11 @@ extension MoviesTarget: TargetType {
     var path: String {
         switch self {
         case .getPopular:
-            return "/popular"
+            return "/movie/popular"
         case .nowPlaying:
-            return "/now_playing"
+            return "/movie/now_playing"
         case .upComing:
-            return "/upcoming"
+            return "/movie/upcoming"
         }
     }
     

@@ -11,12 +11,39 @@ import Kingfisher
 
 class CommonMovieCell: UITableViewCell {
     
+    var model: CommonMovieModel? {
+        willSet {
+            if let posterPath = model?.poster_path {
+                posterImgView.kf.setImage(with: URL(string: thumbnailUrl + posterPath))
+            }
+            
+            if let rate = model?.vote_average {
+                starView.value = CGFloat(Double(rate) ?? 0)
+            }
+            else {
+                starView.value = 0
+            }
+            
+            if let releaseData = model?.release_date {
+                releaseDateLabel.text = "上映日期: " + releaseData
+            }
+            else {
+                 releaseDateLabel.text = "上映日期: 暂无数据"
+            }
+            
+            nameLabel.text = model?.title ?? "暂无数据"
+            rateLabel.text = model?.vote_average ?? "暂无数据"
+            overViewLabel.text = model?.overview ?? "暂无数据"
+        }
+    }
+    
     private lazy var posterImgView: UIImageView =  {
         let posterImgView = UIImageView()
+        posterImgView.image = #imageLiteral(resourceName: "img_poster_placeholder")
         return posterImgView
     }()
     
-    private lazy var nameLabel: UILabel = {
+    lazy var nameLabel: UILabel = {
         let nameLabel = UILabel()
         nameLabel.font = UIFont.systemFont(ofSize: 15.rpx)
         nameLabel.textColor = UIColor.black

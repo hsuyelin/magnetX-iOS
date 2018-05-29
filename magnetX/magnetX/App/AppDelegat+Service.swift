@@ -8,11 +8,14 @@
 
 import Foundation
 import IQKeyboardManagerSwift
+import RxNetwork
+import Moya
 
 extension AppDelegate {
     func registerServices() {
         
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.shouldResignOnTouchOutside = true
+        NetworkService.configService()
     }
 }
