@@ -9,7 +9,11 @@
 import UIKit
 import Foundation
 
-class PersonalViewController: BaseViewController {
+class PersonalViewController: BaseViewController, Routable {
+    static func registerRoute(parameters: [String : Any]?) -> Routable {
+        return PersonalViewController()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

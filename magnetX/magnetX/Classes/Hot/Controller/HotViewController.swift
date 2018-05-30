@@ -10,7 +10,11 @@ import UIKit
 import Foundation
 import LTScrollView
 
-class HotViewController: BaseViewController {
+class HotViewController: BaseViewController, Routable {
+    
+    static func registerRoute(parameters: [String : Any]?) -> Routable {
+        return HotViewController()
+    }
     
     private lazy var viewControllers: [UIViewController] = {
         let nowPlayingVC = HotChildViewController(hotType: .nowPlaying)

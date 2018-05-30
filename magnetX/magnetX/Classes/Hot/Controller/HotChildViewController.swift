@@ -10,6 +10,9 @@ import UIKit
 import MJRefresh
 import RxSwift
 import RxCocoa
+import RxDataSources
+import CocoaChainKit
+import SkeletonView
 
 enum HotType: String {
     case nowPlaying
@@ -29,27 +32,30 @@ class HotChildViewController: BaseViewController {
         }
     }
     
-    private lazy var listView: UITableView = {
-        let listView = UITableView(frame: CGRect.zero, style: .plain)
-        listView.backgroundColor = UIColor.white
-        listView.delegate = self
-        listView.separatorStyle = .none
-        listView.rowHeight = 125.rpx
-        listView.register(CommonMovieCell.self, forCellReuseIdentifier: "CommonMovieCell")
-        listView.mj_header = MJRefreshNormalHeader()
-        listView.mj_footer = MJRefreshBackNormalFooter()
-        return listView
+    private lazy var tableView: UITableView = {
+        let tableView = UITableView(frame: CGRect.zero, style: .plain)
+        tableView.backgroundColor = UIColor.white
+        tableView.separatorStyle = .none
+        tableView.rowHeight = 125.rpx
+        tableView.isSkeletonable = true
+        tableView.register(CommonMovieCell.self, forCellReuseIdentifier: "CommonMovieCell")
+        tableView.mj_header = MJRefreshNormalHeader()
+        tableView.mj_footer = MJRefreshBackNormalFooter()
+        return tableView
     }()
     
-    private lazy var dataSource: [CommonMovieModel] = {
-        let dataSource: [CommonMovieModel] = []
-        return dataSource
+    private lazy var dataSource: RxTableViewSectionedReloadDataSource<CommonMovieListModel> = {
+        RxTableViewSectionedReloadDataSource<CommonMovieListModel>(configureCell: { (_, tableView, indexPath, item) -> UITableViewCell in
+            let cell = tableView.dequeueReusableCell(withIdentifier: "CommonMovieCell", for: indexPath) as! CommonMovieCell
+            cell.bindItem(item)
+            return cell
+        })
     }()
     
     private let disposeBag = DisposeBag()
     private var pageIndex = 1
     
-    /// MARK: - life cycle
+    // MARK: - life cycle
     convenience init(hotType: HotType) {
         self.init(nibName: nil, bundle: nil)
         self.hotType = hotType
@@ -67,10 +73,10 @@ class HotChildViewController: BaseViewController {
         
         super.viewDidLoad()
         setupNavigationItem()
-        disablesAdjustScrollViewInsets(listView)
+        disablesAdjustScrollViewInsets(tableView)
         addSubViews()
         bindViewModel()
-        listView.mj_header.beginRefreshing()
+        didSelectRow()
     }
     
     override func didReceiveMemoryWarning() {
@@ -78,28 +84,45 @@ class HotChildViewController: BaseViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK: private
     private func setupNavigationItem() {
         navigation.item.leftBarButtonItem = nil
     }
     
     private func addSubViews() {
-        view.addSubview(listView)
+        view.addSubview(tableView)
         let tabbarHeight: CGFloat = YL_IS_IPHONEX ? 83.0 : 44.0
-        listView.snp.makeConstraints { (make) in
+        tableView.snp.makeConstraints { (make) in
             make.top.equalToSuperview().offset(44.0)
             make.left.right.equalToSuperview()
             make.height.equalTo(UIScreen.height - tabbarHeight - yl_navWithStatusBarHeight - 44.0)
         }
+        tableView.mj_header.beginRefreshing()
     }
 
     private func bindViewModel() {
-        
+        let viewModel = CommonMovieViewModel()
+        let refresh = tableView.mj_header.rx.refreshing.shareOnce()
+        let more = tableView.mj_footer.rx.refreshing.shareOnce()
+        let input = CommonMovieViewModel.Input(refresh: refresh,
+                                               more: more,
+                                               type: Observable.of(hotType))
+        let output = viewModel.transform(input)
+        output.items.drive(tableView.rx.items(dataSource: dataSource)).disposed(by: disposeBag)
+
+        output.refreshState.map(to: ()).drive(tableView.mj_header.rx.endRefreshing).disposed(by: disposeBag)
+        output.moreState.map(to: ()).drive(tableView.mj_footer.rx.endRefreshing).disposed(by: disposeBag)
     }
     
-}
-
-extension HotChildViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
+    private func didSelectRow() {
+        tableView.rx.itemSelected.asDriver().drive(tableView.rx.deselectRow).disposed(by: disposeBag)
+        tableView.rx.itemSelected.map { indexPath in
+            return (indexPath, self.dataSource[indexPath])
+        }
+        .subscribe(onNext: { indexPath, model in
+            print(model)
+            self.push(MovieDetailViewController.self, parameters: ["id": model.id])
+        })
+        .disposed(by: disposeBag)
     }
 }

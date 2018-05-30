@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		252678CE20BE42B200F7627F /* UIState+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252678CD20BE42B200F7627F /* UIState+Rx.swift */; };
+		252678D020BE7D0000F7627F /* UIScrollView+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252678CF20BE7D0000F7627F /* UIScrollView+Rx.swift */; };
+		252678D720BE875200F7627F /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252678D620BE875200F7627F /* MovieDetailViewController.swift */; };
+		252678D920BE8DD200F7627F /* MovieDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252678D820BE8DD200F7627F /* MovieDetailModel.swift */; };
+		252678DB20BE8DE000F7627F /* MovieDetailMovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252678DA20BE8DE000F7627F /* MovieDetailMovieModel.swift */; };
 		252758BB20B6B2B000347877 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252758B620B6B2B000347877 /* AppDelegate.swift */; };
 		252758BC20B6B2B000347877 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 252758B820B6B2B000347877 /* LaunchScreen.storyboard */; };
 		252758BF20B6B2E100347877 /* AppDelegat+Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252758BE20B6B2E100347877 /* AppDelegat+Service.swift */; };
@@ -67,6 +72,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		252678CD20BE42B200F7627F /* UIState+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIState+Rx.swift"; sourceTree = "<group>"; };
+		252678CF20BE7D0000F7627F /* UIScrollView+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Rx.swift"; sourceTree = "<group>"; };
+		252678D620BE875200F7627F /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
+		252678D820BE8DD200F7627F /* MovieDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailModel.swift; sourceTree = "<group>"; };
+		252678DA20BE8DE000F7627F /* MovieDetailMovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailMovieModel.swift; sourceTree = "<group>"; };
 		252758B620B6B2B000347877 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		252758B920B6B2B000347877 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		252758BA20B6B2B000347877 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -153,6 +163,48 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		252678D120BE873A00F7627F /* MovieDetail */ = {
+			isa = PBXGroup;
+			children = (
+				252678D220BE873A00F7627F /* Controller */,
+				252678D320BE873A00F7627F /* Model */,
+				252678D420BE873A00F7627F /* View */,
+				252678D520BE873A00F7627F /* ViewModel */,
+			);
+			path = MovieDetail;
+			sourceTree = "<group>";
+		};
+		252678D220BE873A00F7627F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				252678D620BE875200F7627F /* MovieDetailViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		252678D320BE873A00F7627F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				252678D820BE8DD200F7627F /* MovieDetailModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		252678D420BE873A00F7627F /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		252678D520BE873A00F7627F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				252678DA20BE8DE000F7627F /* MovieDetailMovieModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		252758B520B6B2B000347877 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,6 +244,7 @@
 				252758CA20B6BF8700347877 /* Recommend */,
 				252758CF20B6BF8700347877 /* Search */,
 				252758D420B6BF8700347877 /* Personal */,
+				252678D120BE873A00F7627F /* MovieDetail */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -562,6 +615,8 @@
 				25BE229C20BD3BC600D066D6 /* ShareOnce+Rx.swift */,
 				25BE229920BD3BC600D066D6 /* UIResponder+Rx.swift */,
 				25BE229A20BD3BC600D066D6 /* UIViewController+Rx.swift */,
+				252678CD20BE42B200F7627F /* UIState+Rx.swift */,
+				252678CF20BE7D0000F7627F /* UIScrollView+Rx.swift */,
 			);
 			path = "Cocoa+Rx";
 			sourceTree = "<group>";
@@ -730,6 +785,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-magnetX/Pods-magnetX-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Cache/Cache.framework",
+				"${BUILT_PRODUCTS_DIR}/CocoaChainKit/CocoaChainKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/EachNavigationBar/EachNavigationBar.framework",
 				"${BUILT_PRODUCTS_DIR}/FSPagerView/FSPagerView.framework",
@@ -744,6 +800,8 @@
 				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
 				"${BUILT_PRODUCTS_DIR}/RxNetwork/RxNetwork.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwiftExt/RxSwiftExt.framework",
+				"${BUILT_PRODUCTS_DIR}/SkeletonView/SkeletonView.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/WCDB.swift/WCDBSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/WKWebViewJavascriptBridge/WKWebViewJavascriptBridge.framework",
@@ -752,6 +810,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cache.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaChainKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EachNavigationBar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSPagerView.framework",
@@ -766,6 +825,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxNetwork.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwiftExt.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkeletonView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WCDBSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WKWebViewJavascriptBridge.framework",
@@ -795,7 +856,9 @@
 				2555D7B920BB8F6500CC010F /* HotViewController.swift in Sources */,
 				252758E220B6C0D000347877 /* SearchViewController.swift in Sources */,
 				25BE22A420BD3BC600D066D6 /* ShareOnce+Rx.swift in Sources */,
+				252678D720BE875200F7627F /* MovieDetailViewController.swift in Sources */,
 				25BE22A320BD3BC600D066D6 /* AsObservable.swift in Sources */,
+				252678DB20BE8DE000F7627F /* MovieDetailMovieModel.swift in Sources */,
 				2579031620B7BE7C00272600 /* KRProgressHUD.swift in Sources */,
 				252758BF20B6B2E100347877 /* AppDelegat+Service.swift in Sources */,
 				252758C120B6B47F00347877 /* AppDelegate+Root.swift in Sources */,
@@ -808,9 +871,11 @@
 				2579030F20B7BE7C00272600 /* Router.swift in Sources */,
 				25BE22A020BD3BC600D066D6 /* MapTo+Rx.swift in Sources */,
 				252758E020B6C0C100347877 /* RecommendViewController.swift in Sources */,
+				252678D920BE8DD200F7627F /* MovieDetailModel.swift in Sources */,
 				2579031D20B7BE7C00272600 /* WebViewController.swift in Sources */,
 				2579031020B7BE7C00272600 /* HUD.swift in Sources */,
 				2555D7D120BBEEA300CC010F /* SwiftyStarRatingView.swift in Sources */,
+				252678D020BE7D0000F7627F /* UIScrollView+Rx.swift in Sources */,
 				2579031420B7BE7C00272600 /* Extensions.swift in Sources */,
 				25BE229E20BD3BC600D066D6 /* Refresh+Rx.swift in Sources */,
 				25BE228E20BCF61600D066D6 /* HotChildViewController.swift in Sources */,
@@ -835,6 +900,7 @@
 				2555D7D620BBF0A500CC010F /* Common.swift in Sources */,
 				2555D7CE20BBE90C00CC010F /* BounceTabBar.swift in Sources */,
 				25BE22C620BD3DED00D066D6 /* ArrayExt.swift in Sources */,
+				252678CE20BE42B200F7627F /* UIState+Rx.swift in Sources */,
 				252758DA20B6BFD000347877 /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

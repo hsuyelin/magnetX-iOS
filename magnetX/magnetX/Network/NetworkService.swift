@@ -22,6 +22,12 @@ class NetworkService  {
                 params.updateValue(TMDB_API_KEY, forKey: "api_key")
                 params.updateValue(XUtils.getCurrentLanguage(), forKey: "language")
                 return .requestParameters(parameters: params, encoding: encoding)
+            case .requestPlain:
+                var params = [String: String]()
+                params.updateValue(TMDB_API_KEY, forKey: "api_key")
+                params.updateValue(XUtils.getCurrentLanguage(), forKey: "language")
+                return .requestParameters(parameters: params, encoding: URLEncoding.default)
+                
             default:
                 return target.task
             }

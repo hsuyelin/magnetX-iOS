@@ -9,27 +9,67 @@
 import Foundation
 import RxSwift
 import RxCocoa
+import RxSwiftExt
+import Differentiator
+import RxNetwork
+
+struct CommonMovieListModel {
+    var items: [CommonMovieModel]
+}
+
+extension CommonMovieListModel: SectionModelType {
+    init(original: CommonMovieListModel, items: [CommonMovieModel]) {
+        self = original
+        self.items = items
+    }
+}
 
 class CommonMovieViewModel {
     struct Input {
-        let refresh: ControlEvent<Void>
-        let more: ControlEvent<Void>
-        let pageIndex: Observable<Int>
-        let apiName: Observable<String>
+        let refresh: Observable<Void>
+        let more: Observable<Void>
+        let type: Observable<HotType>
     }
     
     struct Output {
-        let items: Driver<[CommonMovieModel]>
-        let endRefresh: Driver<Void>
-        let endMore: Driver<Void>
+        let items: Driver<[CommonMovieListModel]>
+        let refreshState: Driver<UIState>
+        let moreState: Driver<UIState>
     }
     
     private var pageIndex = 1
-    private var items: [CommonMovieModel] = []
+    private var sections: [CommonMovieListModel] = []
 }
 
 extension CommonMovieViewModel: ViewModelType {
     func transform(_ input: CommonMovieViewModel.Input) -> CommonMovieViewModel.Output {
-//        let refresh = input.refresh.withLatestFrom(input.apiName, input.pageIndex)
+        let refreshState = PublishRelay<UIState>()
+        let moreState = PublishRelay<UIState>()
+        
+        let refresh = input.refresh.withLatestFrom(input.type).map({ type -> HotType in
+            self.pageIndex = 1
+            return type
+        }).flatMap({ (type) -> Observable<[CommonMovieModel]> in
+            let target = type == .nowPlaying ? MoviesTarget.nowPlaying(pageIndex: self.pageIndex) : MoviesTarget.upComing(pageIndex: self.pageIndex)
+            return target.cache.request([CommonMovieModel].self).trackNWState(refreshState).catchErrorJustComplete()
+        }).map({ items -> [CommonMovieListModel] in
+            self.sections = [CommonMovieListModel(items: items)]
+            return self.sections
+        })
+    
+        let more = input.more.withLatestFrom(input.type).map({ type -> HotType in
+            self.pageIndex += 1
+            return type
+        }).flatMapLatest { (type) -> Observable<[CommonMovieModel]> in
+            let target = type == .nowPlaying ? MoviesTarget.nowPlaying(pageIndex: self.pageIndex) : MoviesTarget.upComing(pageIndex: self.pageIndex)
+            return target.cache.request([CommonMovieModel].self).trackNWState(moreState).catchErrorJustComplete()
+        }.map({ items -> [CommonMovieListModel] in
+            self.sections.append(CommonMovieListModel(items: items))
+            return self.sections
+        })
+        
+        let items = Observable.merge(refresh, more).asDriver(onErrorJustReturn: [])
+        
+        return Output(items: items, refreshState: refreshState.asDriver(onErrorJustReturn: .idle), moreState: moreState.asDriver(onErrorJustReturn: .idle))
     }
 }

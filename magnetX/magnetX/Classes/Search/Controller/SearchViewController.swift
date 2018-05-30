@@ -9,7 +9,11 @@
 import UIKit
 import Foundation
 
-class SearchViewController: BaseViewController {
+class SearchViewController: BaseViewController, Routable {
+    static func registerRoute(parameters: [String : Any]?) -> Routable {
+        return SearchViewController()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

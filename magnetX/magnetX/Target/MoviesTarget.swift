@@ -12,6 +12,7 @@ enum MoviesTarget {
     case getPopular(pageIndex: Int)
     case nowPlaying(pageIndex: Int)
     case upComing(pageIndex: Int)
+    case getDetails(id: String)
 }
 
 extension MoviesTarget: TargetType {
@@ -24,6 +25,8 @@ extension MoviesTarget: TargetType {
             return "/movie/now_playing"
         case .upComing:
             return "/movie/upcoming"
+        case .getDetails(let id):
+            return "/movie/\(id.urlEncoding())"
         }
     }
     
@@ -35,6 +38,8 @@ extension MoviesTarget: TargetType {
             return .requestParameters(parameters: ["page": pageIndex], encoding: URLEncoding.default)
         case .upComing(let pageIndex):
             return .requestParameters(parameters: ["page": pageIndex], encoding: URLEncoding.default)
+        case .getDetails:
+            return .requestPlain
         }
     }
 }

@@ -8,6 +8,8 @@ target 'magnetX' do
   pod 'RxCocoa'
   pod 'RxNetwork'
   pod 'RxDataSources'
+  pod 'RxSwiftExt'
+  pod 'Differentiator'
   pod 'Kingfisher'
   pod 'SnapKit'
   pod 'EachNavigationBar'
@@ -18,5 +20,7 @@ target 'magnetX' do
   pod 'MJRefresh'
   pod 'Ono'
   pod 'LTScrollView'
+  pod 'CocoaChainKit'
+  pod 'SkeletonView'
 
 end

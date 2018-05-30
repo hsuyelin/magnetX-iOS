@@ -11,7 +11,11 @@ import Foundation
 import RxNetwork
 import Moya
 
-class RecommendViewController: BaseViewController {
+class RecommendViewController: BaseViewController, Routable {
+    
+    static func registerRoute(parameters: [String : Any]?) -> Routable {
+        return RecommendViewController()
+    }
     
     private let disposeBag = DisposeBag()
     

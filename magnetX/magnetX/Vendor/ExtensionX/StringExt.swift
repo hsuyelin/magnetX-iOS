@@ -39,3 +39,16 @@ public extension String {
         return String(self[fromIndex..<toIndex])
     }
 }
+
+public extension String {
+    
+    func urlEncoding() -> String {
+        if self.isBlank { return "" }
+        return self.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
+    }
+    
+    func urlDecoding() -> String {
+        if self.isBlank { return "" }
+        return self.removingPercentEncoding ?? ""
+    }
+}
