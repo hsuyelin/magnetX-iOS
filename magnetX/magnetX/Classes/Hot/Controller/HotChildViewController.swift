@@ -26,9 +26,9 @@ class HotChildViewController: BaseViewController {
     private var target: MoviesTarget {
         switch hotType {
         case .nowPlaying:
-            return MoviesTarget.nowPlaying(pageIndex: pageIndex)
+            return MoviesTarget.getNowPlaying(pageIndex: pageIndex)
         case .upComing:
-            return MoviesTarget.upComing(pageIndex: pageIndex)
+            return MoviesTarget.getUpComing(pageIndex: pageIndex)
         }
     }
     
@@ -37,7 +37,6 @@ class HotChildViewController: BaseViewController {
         tableView.backgroundColor = UIColor.white
         tableView.separatorStyle = .none
         tableView.rowHeight = 125.rpx
-        tableView.isSkeletonable = true
         tableView.register(CommonMovieCell.self, forCellReuseIdentifier: "CommonMovieCell")
         tableView.mj_header = MJRefreshNormalHeader()
         tableView.mj_footer = MJRefreshBackNormalFooter()
