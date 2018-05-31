@@ -46,7 +46,7 @@ extension MovieDetailViewModel: ViewModelType {
         let items = input.refresh.withLatestFrom(input.target).map({ target -> MoviesTarget in
             return target
         }).flatMap({
-            $0.cache.request([MovieDetailModel].self).trackNWState(refreshState).catchErrorJustComplete()
+            $0.cache.request([MovieDetailModel].self).trackState(refreshState).catchErrorJustComplete()
         }).map({ items -> [MovieDetailListModel] in
             self.sections = [MovieDetailListModel(items: items)]
             return self.sections

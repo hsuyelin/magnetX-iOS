@@ -2,6 +2,7 @@ PODS:
   - Alamofire (4.7.2)
   - Cache (4.2.0)
   - CocoaChainKit (0.4.2)
+  - ColorThiefSwift (0.3.0)
   - Differentiator (3.0.2)
   - EachNavigationBar (0.1.2)
   - FSPagerView (0.7.1)
@@ -33,6 +34,7 @@ PODS:
     - RxSwift (~> 4.0)
   - SkeletonView (1.2)
   - SnapKit (4.0.0)
+  - Toast-Swift (3.0.1)
   - WCDB.swift (1.0.6):
     - WCDB.swift/sqlcipher (= 1.0.6)
   - WCDB.swift/sqlcipher (1.0.6)
@@ -40,6 +42,7 @@ PODS:
 
 DEPENDENCIES:
   - CocoaChainKit
+  - ColorThiefSwift
   - Differentiator
   - EachNavigationBar
   - FSPagerView
@@ -55,6 +58,7 @@ DEPENDENCIES:
   - RxSwiftExt
   - SkeletonView
   - SnapKit
+  - Toast-Swift
   - WCDB.swift
   - WKWebViewJavascriptBridge
 
@@ -63,6 +67,7 @@ SPEC REPOS:
     - Alamofire
     - Cache
     - CocoaChainKit
+    - ColorThiefSwift
     - Differentiator
     - EachNavigationBar
     - FSPagerView
@@ -80,6 +85,7 @@ SPEC REPOS:
     - RxSwiftExt
     - SkeletonView
     - SnapKit
+    - Toast-Swift
     - WCDB.swift
     - WKWebViewJavascriptBridge
 
@@ -87,6 +93,7 @@ SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
   Cache: f28f8dd64b632155aabf9b3906b036a659048251
   CocoaChainKit: b812b87c270e8383cf65640857d63112b1d8ad88
+  ColorThiefSwift: bca6dee535214015763310b7dd316290840c87e3
   Differentiator: a87be69eba49ec4ab460c7671143ee3a9eececfd
   EachNavigationBar: 899d8bdb544e6283d631b05648a6974a7c3d2573
   FSPagerView: 958aba39684e1573755ddcfcc29f7eebb8413cee
@@ -104,9 +111,10 @@ SPEC CHECKSUMS:
   RxSwiftExt: 64b7140124629a6a084159735f3714f0fb1c61d6
   SkeletonView: d68962d45d1af038f6a110d2274b183df8f82752
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
+  Toast-Swift: ba0b01b095aada709d915f9beb1d38184a2721c3
   WCDB.swift: 5bb038bc5bb46067cccc7c48392e8f4c4a15def0
   WKWebViewJavascriptBridge: 8da532409bc489ba2c0a69cf38e5d1cd49e3d5e4
 
-PODFILE CHECKSUM: d8f84513d4f21691f32d355605fe57cfa4a3dee7
+PODFILE CHECKSUM: dacfa8a82b173c6e3ed672e827bebb2aefafb19b
 
 COCOAPODS: 1.5.2

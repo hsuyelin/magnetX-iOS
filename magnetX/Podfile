@@ -22,5 +22,7 @@ target 'magnetX' do
   pod 'LTScrollView'
   pod 'CocoaChainKit'
   pod 'SkeletonView'
+  pod 'Toast-Swift'
+  pod 'ColorThiefSwift'
 
 end

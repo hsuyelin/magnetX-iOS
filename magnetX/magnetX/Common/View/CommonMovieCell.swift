@@ -35,6 +35,15 @@ class CommonMovieCell: UITableViewCell {
         return starView
     }()
     
+    private lazy var noRateLabel: UILabel = {
+        let noRateLabel = UILabel()
+        noRateLabel.font = UIFont.systemFont(ofSize: 12.rpx)
+        noRateLabel.textColor = UIColor.normal
+        noRateLabel.text = "暂无评分"
+        noRateLabel.isHidden = true
+        return noRateLabel
+    }()
+    
     private lazy var rateLabel: UILabel = {
         let rateLabel = UILabel()
         rateLabel.font = UIFont.systemFont(ofSize: 12.rpx)
@@ -68,6 +77,10 @@ class CommonMovieCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+    }
+    
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         backgroundColor = UIColor.white
@@ -82,6 +95,7 @@ class CommonMovieCell: UITableViewCell {
     private func loadSubviews() {
         contentView.addSubview(posterImgView)
         contentView.addSubview(nameLabel)
+        contentView.addSubview(noRateLabel)
         contentView.addSubview(starView)
         contentView.addSubview(rateLabel)
         contentView.addSubview(releaseDateLabel)
@@ -97,6 +111,12 @@ class CommonMovieCell: UITableViewCell {
             make.top.equalTo(posterImgView.snp.top)
             make.left.equalTo(posterImgView.snp.right).offset(10.rpx)
             make.right.equalToSuperview().offset(-10.rpx)
+        }
+        
+        noRateLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(nameLabel.snp.bottom).offset(5.rpx)
+            make.left.equalTo(posterImgView.snp.right).offset(10.rpx)
+            make.size.equalTo(CGSize(width: 75.rpx, height: 25.rpx))
         }
         
         starView.snp.makeConstraints { (make) in
@@ -130,9 +150,14 @@ extension CommonMovieCell {
             posterImgView.kf.setImage(with: URL(string: thumbnailUrl + model.poster_path), placeholder:#imageLiteral(resourceName: "img_poster_loading_placeholder"))
         }
         
+        let voteCount: CGFloat = CGFloat(Double(model.vote_count) ?? 0)
         let rate: CGFloat = CGFloat(Double(model.vote_average) ?? 0)
+        noRateLabel.isHidden = voteCount > 0
+        starView.isHidden = !noRateLabel.isHidden
+        rateLabel.isHidden = !noRateLabel.isHidden
         starView.value = rate / 2.0
         rateLabel.text = String.init(format: "%.1f", rate)
+
         nameLabel.text = !model.title.isBlank ? model.title : "暂无数据"
         releaseDateLabel.text = "上映日期: " + (!model.release_date.isBlank ? model.release_date : "暂无数据")
         overViewLabel.text = "简介: " + (!model.overview.isBlank ? model.overview : "暂无数据")

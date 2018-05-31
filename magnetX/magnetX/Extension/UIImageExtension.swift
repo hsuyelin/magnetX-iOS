@@ -13,4 +13,3 @@ extension UIImage {
         return withRenderingMode(.alwaysOriginal)
     }
 }
-

@@ -109,8 +109,11 @@ class HotChildViewController: BaseViewController {
         let output = viewModel.transform(input)
         output.items.drive(tableView.rx.items(dataSource: dataSource)).disposed(by: disposeBag)
 
-        output.refreshState.map(to: ()).drive(tableView.mj_header.rx.endRefreshing).disposed(by: disposeBag)
-        output.moreState.map(to: ()).drive(tableView.mj_footer.rx.endRefreshing).disposed(by: disposeBag)
+        output.items.map(to: ()).drive(tableView.mj_header.rx.endRefreshing).disposed(by: disposeBag)
+        output.items.map(to: ()).drive(tableView.mj_footer.rx.endRefreshing).disposed(by: disposeBag)
+        
+        output.refreshState.drive(HUD.rx.state).disposed(by: disposeBag)
+        output.moreState.drive(HUD.rx.state).disposed(by: disposeBag)
     }
     
     private func didSelectRow() {
@@ -120,7 +123,8 @@ class HotChildViewController: BaseViewController {
         }
         .subscribe(onNext: { indexPath, model in
             print(model)
-            self.push(MovieDetailViewController.self, parameters: ["id": model.id])
+            print(XUtils.getCurrentRegion())
+            self.push(MovieDetailViewController.self, parameters: ["id": model.id, "posterURL": model.poster_path])
         })
         .disposed(by: disposeBag)
     }
