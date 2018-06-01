@@ -58,6 +58,7 @@ class MovieRateAreaView: UIView {
         self.layer.shadowOpacity = 0.25
         self.layer.shadowColor = UIColor.init(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.8).cgColor
         self.layer.shadowOffset = CGSize(width: 1.0, height: 1.0)
+        self.layer.cornerRadius = 1.0
     }
     
     private func loadSubviews() {

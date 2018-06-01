@@ -82,7 +82,7 @@ class MovieDetailViewController: BaseViewController, Routable {
         
         tableHeaderView.insertSubview(scaleHeaderView, at: 0)
         
-        let rateAreaView = MovieRateAreaView.init(frame: CGRect(x: 100, y: 100, width: 80, height: 80))
+        let rateAreaView = MovieRateAreaView.init(frame: CGRect(x: 100, y: 100, width: 90, height: 90))
         view.addSubview(rateAreaView)
     }
     
