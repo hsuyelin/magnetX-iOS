@@ -27,62 +27,41 @@ class MovieDetailViewController: BaseViewController, Routable {
     
     var id: String = ""
     var posterURL: String = ""
+    var originalRect: CGRect = CGRect()
     private let disposeBag = DisposeBag()
+    
+    private lazy var tableHeaderView: MovieDetailHeaderView = {
+        let tableHeaderView = MovieDetailHeaderView.init(frame: CGRect(x: 0.0, y: 0.0, width: UIScreen.width, height: UIScreen.width + yl_statusBarHeight))
+        originalRect = tableHeaderView.frame
+        return tableHeaderView
+    }()
+    
+    private lazy var scaleHeaderView: UIImageView = {
+        let scaleHeaderView = UIImageView.init(frame: CGRect(x: 0.0, y: 0.0, width: UIScreen.width, height: UIScreen.width + yl_statusBarHeight))
+        scaleHeaderView.contentMode = .scaleAspectFill
+        scaleHeaderView.clipsToBounds = true
+        return scaleHeaderView
+    }()
     
     private lazy var tableView: UITableView = {
         let tableView = UITableView(frame: CGRect.zero, style: .plain)
         tableView.backgroundColor = UIColor.white
-//        tableView.separatorStyle = .none
         tableView.rowHeight = 125.rpx
         tableView.isSkeletonable = true
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
+        tableView.tableHeaderView = tableHeaderView
         return tableView
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        disablesAdjustScrollViewInsets(tableView)
         setupNavigationItem()
         addSubViews()
-        let v1 = UIView.init(frame: CGRect(x: 15, y: 80, width: 50, height: 50))
-        v1.backgroundColor = UIColor.red
-        view.addSubview(v1)
-        
-        let v2 = UIView.init(frame: CGRect(x: 80, y: 80, width: 50, height: 50))
-        v2.backgroundColor = UIColor.red
-        view.addSubview(v2)
-        
-        let v3 = UIView.init(frame: CGRect(x: 145, y: 150, width: 50, height: 50))
-        v3.backgroundColor = UIColor.red
-        view.addSubview(v3)
-        
-        let imgView = UIImageView.init(frame: CGRect(x: 100, y: 100, width: 200, height: 300))
-        imgView.backgroundColor = UIColor.red
-        imgView.center = view.center
-        view.addSubview(imgView)
-        let url: URL = URL(string: thumbnailUrl + posterURL)!
-        KingfisherManager.shared.downloader.downloadImage(with: url, retrieveImageTask: nil, options: nil, progressBlock: nil) { (image, error, url, data) in
-            imgView.image = image
-//            DispatchQueue.global(qos: .default).async {
-//                guard let colors = ColorThief.getPalette(from: image!, colorCount: 10, quality: 1, ignoreWhite: true) else {
-//                    return
-//                }
-                let start = Date()
-                guard let dominantColor = ColorThief.getColor(from: image!) else {
-                    return
-                }
-                let elapsed = -start.timeIntervalSinceNow
-                NSLog("time for getColorFromImage: \(Int(elapsed * 1000.0))ms")
-//                DispatchQueue.main.async { [weak self] in
-                    self.navigation.bar.backgroundColor = dominantColor.makeUIColor()
-//                    v1.backgroundColor = colors[0].makeUIColor()
-//                    v2.backgroundColor = colors[1].makeUIColor()
-//                    v3.backgroundColor = colors[2].makeUIColor()
-//                }
-//            }
-        }
+        loadPoster()
     }
     
     override func didReceiveMemoryWarning() {
@@ -91,15 +70,36 @@ class MovieDetailViewController: BaseViewController, Routable {
     }
     
     private func setupNavigationItem() {
-        navigation.item.leftBarButtonItem = nil
         navigation.item.title = "电影"
-//        navigation.bar.alpha = 0
+        navigation.bar.alpha = 0
     }
     
     private func addSubViews() {
         view.addSubview(tableView)
         tableView.snp.makeConstraints { (make) in
             make.edges.equalToSuperview()
+        }
+        
+        tableHeaderView.insertSubview(scaleHeaderView, at: 0)
+        
+        let rateAreaView = MovieRateAreaView.init(frame: CGRect(x: 100, y: 100, width: 80, height: 80))
+        view.addSubview(rateAreaView)
+    }
+    
+    private func loadPoster() {
+        let resource = ImageResource(downloadURL: URL(string: thumbnailUrl + posterURL)!)
+        KingfisherManager.shared.retrieveImage(with: resource, options: nil, progressBlock: nil) { (image, error, cacheType, imageURL) in
+            if error == nil {
+                guard let dominantColor = ColorThief.getColor(from: image!) else {
+                    return
+                }
+                self.navigation.bar.backgroundColor = dominantColor.makeUIColor()
+                self.tableHeaderView.loadPosterImage(image: image)
+                self.scaleHeaderView.backgroundColor = dominantColor.makeUIColor()
+            }
+            else {
+                self.scaleHeaderView.image = #imageLiteral(resourceName: "img_poster_placeholder")
+            }
         }
     }
 }
@@ -108,7 +108,6 @@ class MovieDetailViewController: BaseViewController, Routable {
 extension MovieDetailViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
     }
 }
 
@@ -121,11 +120,19 @@ extension MovieDetailViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
-        configureCell(cell: cell, forRowAt: indexPath)
+        let myCustomSelectionColorView = UIView()
+        myCustomSelectionColorView.backgroundColor = UIColor.cellHighlightedColor
+        cell.selectedBackgroundView = myCustomSelectionColorView
         return cell
     }
+}
+
+extension MovieDetailViewController: UIScrollViewDelegate {
     
-    func configureCell(cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let offsetY: CGFloat = scrollView.contentOffset.y
+        if offsetY < 0 {
+            scaleHeaderView.frame = CGRect.init(x: originalRect.origin.x, y: offsetY, width: UIScreen.width, height: UIScreen.width + yl_statusBarHeight - offsetY)
+        }
     }
 }

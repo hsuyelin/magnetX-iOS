@@ -12,7 +12,7 @@ import Moya
 class NetworkService  {
     
     public static func configService() {
-        Network.shared.timeoutInterval = 20
+        Network.shared.timeoutInterval = 15
         let plugins: [PluginType] = NetworkEnvironment.environment == .develop ? [NetworkIndicatorPlugin(), NetworkLoggerPlugin(verbose: true)] : [NetworkIndicatorPlugin()]
         Network.shared.plugins = plugins
         Network.shared.taskClosure = { target in
@@ -21,13 +21,13 @@ class NetworkService  {
                 var params = parameters
                 params.updateValue(TMDB_API_KEY, forKey: "api_key")
                 params.updateValue(XUtils.getCurrentLanguage(), forKey: "language")
-                params.updateValue(XUtils.getCurrentRegion(), forKey: "region")
+//                params.updateValue(XUtils.getCurrentRegion(), forKey: "region")
                 return .requestParameters(parameters: params, encoding: encoding)
             case .requestPlain:
                 var params = [String: String]()
                 params.updateValue(TMDB_API_KEY, forKey: "api_key")
                 params.updateValue(XUtils.getCurrentLanguage(), forKey: "language")
-                params.updateValue(XUtils.getCurrentRegion(), forKey: "region")
+//                params.updateValue(XUtils.getCurrentRegion(), forKey: "region")
                 return .requestParameters(parameters: params, encoding: URLEncoding.default)
                 
             default:

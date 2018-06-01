@@ -24,4 +24,9 @@ public extension UIColor {
     class var selected: UIColor {
         return UIColor(hex: "#383838")
     }
+    
+    /// #F7F6F2
+    class var cellHighlightedColor: UIColor {
+        return UIColor(hex: "#F7F6F2")
+    }
 }

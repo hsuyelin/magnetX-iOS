@@ -9,7 +9,7 @@
 import UIKit
 import Kingfisher
 
-class CommonMovieCell: UITableViewCell {
+class CommonMovieCell: CommonTableViewCell {
     
     private lazy var posterImgView: UIImageView =  {
         let posterImgView = UIImageView()
@@ -17,7 +17,7 @@ class CommonMovieCell: UITableViewCell {
         return posterImgView
     }()
     
-    lazy var nameLabel: UILabel = {
+    private lazy var nameLabel: UILabel = {
         let nameLabel = UILabel()
         nameLabel.font = UIFont.systemFont(ofSize: 15.rpx)
         nameLabel.textColor = UIColor.black
@@ -51,14 +51,14 @@ class CommonMovieCell: UITableViewCell {
         return rateLabel
     }()
     
-    lazy var releaseDateLabel: UILabel = {
+    private lazy var releaseDateLabel: UILabel = {
         let releaseDateLabel = UILabel()
         releaseDateLabel.font = UIFont.systemFont(ofSize: 12.rpx)
         releaseDateLabel.textColor = UIColor.normal
         return releaseDateLabel
     }()
     
-    lazy var overViewLabel: UILabel = {
+    private lazy var overViewLabel: UILabel = {
         let overViewLabel = UILabel()
         overViewLabel.font = UIFont.systemFont(ofSize: 12.rpx)
         overViewLabel.textColor = UIColor.normal
@@ -66,25 +66,9 @@ class CommonMovieCell: UITableViewCell {
         return overViewLabel
     }()
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
-    }
-    
-    override func prepareForReuse() {
-        super.prepareForReuse()
-    }
-    
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         backgroundColor = UIColor.white
-//        selectionStyle = .none
         loadSubviews()
     }
     

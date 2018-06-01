@@ -51,7 +51,7 @@ extension CommonMovieViewModel: ViewModelType {
             return type
         }).flatMap({ (type) -> Observable<[CommonMovieModel]> in
             let target = type == .nowPlaying ? MoviesTarget.getNowPlaying(pageIndex: self.pageIndex) : MoviesTarget.getUpComing(pageIndex: self.pageIndex)
-            return target.cache.requestWithResult([CommonMovieModel].self).trackState(refreshState, loading: false).catchErrorJustComplete()
+            return target.cache.requestWithResult([CommonMovieModel].self).trackState(refreshState, loading: false).catchErrorJustReturn([])
         }).map({ items -> [CommonMovieListModel] in
             self.sections = [CommonMovieListModel(items: items)]
             return self.sections
@@ -62,7 +62,7 @@ extension CommonMovieViewModel: ViewModelType {
             return type
         }).flatMapLatest { (type) -> Observable<[CommonMovieModel]> in
             let target = type == .nowPlaying ? MoviesTarget.getNowPlaying(pageIndex: self.pageIndex) : MoviesTarget.getUpComing(pageIndex: self.pageIndex)
-            return target.request().mapResult([CommonMovieModel].self).trackState(moreState, loading: false).catchErrorJustComplete()
+            return target.request().mapResult([CommonMovieModel].self).trackState(moreState, loading: false).catchErrorJustReturn([])
         }.map({ items -> [CommonMovieListModel] in
             self.sections.append(CommonMovieListModel(items: items))
             return self.sections
