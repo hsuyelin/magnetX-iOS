@@ -12,10 +12,10 @@ import Moya
 class NetworkService  {
     
     public static func configService() {
-        Network.shared.timeoutInterval = 15
+        Network.default.timeoutInterval = 15
         let plugins: [PluginType] = NetworkEnvironment.environment == .develop ? [NetworkIndicatorPlugin(), NetworkLoggerPlugin(verbose: true)] : [NetworkIndicatorPlugin()]
-        Network.shared.plugins = plugins
-        Network.shared.taskClosure = { target in
+        Network.default.plugins = plugins
+        Network.default.taskClosure = { target in
             switch target.task {
             case let .requestParameters(parameters, encoding):
                 var params = parameters

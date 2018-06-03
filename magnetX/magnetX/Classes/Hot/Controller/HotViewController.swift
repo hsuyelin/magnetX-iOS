@@ -46,6 +46,7 @@ class HotViewController: BaseViewController, Routable {
             return UIView()
         })
         pageView.hoverY = glt_navWithStatusBarHeight
+        pageView.isClickScrollAnimation = true
         pageView.delegate = self
         return pageView
     }()

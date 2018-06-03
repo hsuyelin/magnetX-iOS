@@ -8,7 +8,7 @@ PODS:
   - FSPagerView (0.7.1)
   - IQKeyboardManagerSwift (6.0.3)
   - Kingfisher (4.8.0)
-  - LTScrollView (0.1.5)
+  - LTScrollView (0.1.6)
   - MJRefresh (3.1.15.3)
   - Moya/Core (11.0.2):
     - Alamofire (~> 4.1)
@@ -24,7 +24,7 @@ PODS:
     - Differentiator (~> 3.0)
     - RxCocoa (~> 4.0)
     - RxSwift (~> 4.0)
-  - RxNetwork (0.3.1):
+  - RxNetwork (0.4.0):
     - Cache
     - Moya/RxSwift
   - RxSwift (4.1.2)
@@ -63,7 +63,7 @@ DEPENDENCIES:
   - WKWebViewJavascriptBridge
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - Alamofire
     - Cache
     - CocoaChainKit
@@ -99,14 +99,14 @@ SPEC CHECKSUMS:
   FSPagerView: 958aba39684e1573755ddcfcc29f7eebb8413cee
   IQKeyboardManagerSwift: 04e8679f85e496bb2c474eeb9284052f1b3c391c
   Kingfisher: 976d828df2b24834c6a3f2fc4d82cdbd26552be1
-  LTScrollView: e0eaae134bba74a9018cd22ba5e07bdb155340c0
+  LTScrollView: 54ad587a9664434c6b25eefd2b8095eb5641c79c
   MJRefresh: b48380ae2b927b46c4ef000de9adb8dc748e1df7
   Moya: a725035953bc1c0eb1be505ab903984501d82440
   Ono: e6d825e80ec73325e6d872ae4f2304f7378acb0e
   Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
   RxCocoa: d88ba0f1f6abf040011a9eb4b539324fc426843a
   RxDataSources: cb7c31e652a87ebb919da45f716bbb87b3765f6b
-  RxNetwork: abd942cc7efd710b6a41b3a32fb553acc85c5930
+  RxNetwork: d61fa60a8b5d91ddce950030235f663f99eb2bcd
   RxSwift: e49536837d9901277638493ea537394d4b55f570
   RxSwiftExt: 64b7140124629a6a084159735f3714f0fb1c61d6
   SkeletonView: d68962d45d1af038f6a110d2274b183df8f82752
@@ -117,4 +117,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: dacfa8a82b173c6e3ed672e827bebb2aefafb19b
 
-COCOAPODS: 1.5.2
+COCOAPODS: 1.5.0

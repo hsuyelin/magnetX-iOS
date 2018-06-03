@@ -13,7 +13,7 @@ class MovieRateAreaView: UIView {
     private lazy var rateOrgLabel: UILabel = {
         let rateOrgLabel = UILabel()
         rateOrgLabel.textColor = UIColor(hex: "#CBCACB")
-        rateOrgLabel.font = UIFont.systemFont(ofSize: 10.rpx)
+        rateOrgLabel.font = UIFont.systemFont(ofSize: 8.rpx)
         rateOrgLabel.numberOfLines = 1
         return rateOrgLabel
     }()
@@ -21,7 +21,7 @@ class MovieRateAreaView: UIView {
     private lazy var rateValueLabel: UILabel = {
         let rateValueLabel = UILabel()
         rateValueLabel.textColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.9)
-        rateValueLabel.font = UIFont.systemFont(ofSize: 16.rpx)
+        rateValueLabel.font = UIFont.systemFont(ofSize: 20.rpx)
         return rateValueLabel
     }()
     
@@ -38,7 +38,7 @@ class MovieRateAreaView: UIView {
     private lazy var rateCountLabel: UILabel = {
         let rateCountLabel = UILabel()
         rateCountLabel.textColor = UIColor.normal
-        rateCountLabel.font = UIFont.systemFont(ofSize: 10.rpx)
+        rateCountLabel.font = UIFont.systemFont(ofSize: 8.rpx)
         return rateCountLabel
     }()
     
@@ -73,26 +73,26 @@ class MovieRateAreaView: UIView {
         }
         
         rateValueLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(rateOrgLabel.snp.bottom).offset(5.rpx)
+            make.top.equalTo(rateOrgLabel.snp.bottom).offset(3.rpx)
             make.centerX.equalTo(self.snp.centerX)
         }
         
         starView.snp.makeConstraints { (make) in
-            make.top.equalTo(rateValueLabel.snp.bottom).offset(5.rpx)
+            make.top.equalTo(rateValueLabel.snp.bottom).offset(3.rpx)
             make.centerX.equalTo(self.snp.centerX)
-            make.size.equalTo(CGSize(width: 39.rpx, height: 13.rpx))
+            make.size.equalTo(CGSize(width: 54.rpx, height: 18.rpx))
         }
         
         rateCountLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(starView.snp.bottom).offset(5.rpx)
+            make.top.equalTo(starView.snp.bottom).offset(3.rpx)
             make.centerX.equalTo(self.snp.centerX)
         }
     }
     
     private func loadFakeData() {
         rateOrgLabel.text = "TMDB评分"
-        rateValueLabel.text = "7.8"
-        starView.value = 7.8
-        rateCountLabel.text = "99999"
+        rateValueLabel.text = "7.0"
+        starView.value = 3.5
+        rateCountLabel.text = "7278人"
     }
 }
