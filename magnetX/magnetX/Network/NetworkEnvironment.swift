@@ -15,9 +15,9 @@ public enum NetworkEnvironment {
     var baseURL: String {
         switch self {
         case .develop:
-            return "https://api.themoviedb.org/3"
+            return "http://api.douban.com/v2/movie"
         case .product:
-            return "https://api.themoviedb.org/3"
+            return "http://api.douban.com/v2/movie"
         }
     }
 }

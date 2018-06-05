@@ -8,7 +8,7 @@
 
 import Foundation
 import IQKeyboardManagerSwift
-import RxNetwork
+import RxSwiftX
 import Moya
 
 extension AppDelegate {

@@ -11,7 +11,7 @@ import RxSwift
 import RxCocoa
 import RxSwiftExt
 import Differentiator
-import RxNetwork
+import RxSwiftX
 
 struct MovieDetailListModel {
     var items: [MovieDetailModel]
@@ -26,13 +26,11 @@ extension MovieDetailListModel: SectionModelType {
 
 class MovieDetailViewModel {
     struct Input {
-        let refresh: Observable<Void>
         let target: Observable<MoviesTarget>
     }
     
     struct Output {
         let items: Driver<[MovieDetailListModel]>
-        let refreshState: Driver<UIState>
     }
 
     private var sections: [MovieDetailListModel] = []
@@ -40,19 +38,16 @@ class MovieDetailViewModel {
 
 extension MovieDetailViewModel: ViewModelType {
     func transform(_ input: MovieDetailViewModel.Input) -> MovieDetailViewModel.Output {
-        
-        let refreshState = PublishRelay<UIState>()
-        
-        let items = input.refresh.withLatestFrom(input.target).map({ target -> MoviesTarget in
+        let items = input.target.map({ target -> MoviesTarget in
             return target
         }).flatMap({
-            $0.cache.request([MovieDetailModel].self).trackState(refreshState).catchErrorJustComplete()
-        }).map({ items -> [MovieDetailListModel] in
-            self.sections = [MovieDetailListModel(items: items)]
+            $0.cache.request(MovieDetailModel.self).catchErrorJustComplete()
+        }).map({ data -> [MovieDetailListModel] in
+            self.sections = [MovieDetailListModel(items: [data]), MovieDetailListModel(items: [data])]
             return self.sections
         }).asDriver(onErrorJustReturn: [])
         
-        return Output(items: items, refreshState: refreshState.asDriver(onErrorJustReturn: .idle))
+        return Output(items: items)
     }
 }
 

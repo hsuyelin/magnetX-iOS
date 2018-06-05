@@ -6,7 +6,7 @@
 //  Copyright © 2018年 gaoX. All rights reserved.
 //
 
-import RxNetwork
+import RxSwiftX
 import Moya
 
 extension Network {
@@ -38,7 +38,7 @@ extension Network {
     struct Response<T: Codable>: Codable {
         let status_code: Int
         let status_message: String
-        let results: T
+        let subjects: T
         
         var success: Bool {
             return status_code == 0
@@ -54,7 +54,7 @@ extension PrimitiveSequence where TraitType == SingleTrait, ElementType: Moya.Re
         return flatMap { response -> Single<T> in
             if let resp = try? response.map(Network.Response<T>.self) {
                 if resp.success {
-                    return Single.just(resp.results)
+                    return Single.just(resp.subjects)
                 }
                 return Single.error(Network.Error.status(code: resp.status_code, message: resp.status_message))
             }
@@ -70,7 +70,7 @@ extension PrimitiveSequence where TraitType == SingleTrait, ElementType: TargetT
                                        using decoder: JSONDecoder = .init()) -> Single<T> {
         return flatMap({ target -> Single<T> in
             target.request().map(Network.Response<T>.self, atKeyPath: keyPath, using: decoder).map({
-                if $0.success { return $0.results }
+                if $0.success { return $0.subjects }
                 throw Network.Error.status(code: $0.status_code, message: $0.status_message)
             }).storeCachedObject(for: target)
         })
@@ -84,7 +84,7 @@ extension ObservableType where E: TargetType {
                                        using decoder: JSONDecoder = .init()) -> Observable<T> {
         return flatMap { target -> Observable<T> in
             let result = target.request().map(Network.Response<T>.self, atKeyPath: keyPath, using: decoder).map({ response -> T in
-                if response.success { return response.results }
+                if response.success { return response.subjects }
                 throw Network.Error.status(code: response.status_code, message: response.status_message)
             }).storeCachedObject(for: target).asObservable()
             

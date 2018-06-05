@@ -52,3 +52,9 @@ public extension String {
         return self.removingPercentEncoding ?? ""
     }
 }
+
+public extension String {
+    func nsRange(from range: Range<String.Index>) -> NSRange {
+        return NSRange(range, in: self)
+    }
+}

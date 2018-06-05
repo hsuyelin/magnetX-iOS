@@ -11,7 +11,7 @@ import UIKit
 
 @_exported import RxSwift
 @_exported import RxCocoa
-@_exported import RxNetwork
+@_exported import RxSwiftX
 
 import EachNavigationBar
 import SnapKit

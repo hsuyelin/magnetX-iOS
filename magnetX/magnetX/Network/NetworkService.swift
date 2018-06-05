@@ -19,15 +19,11 @@ class NetworkService  {
             switch target.task {
             case let .requestParameters(parameters, encoding):
                 var params = parameters
-                params.updateValue(TMDB_API_KEY, forKey: "api_key")
-                params.updateValue(XUtils.getCurrentLanguage(), forKey: "language")
-//                params.updateValue(XUtils.getCurrentRegion(), forKey: "region")
+                params.updateValue(String(LIMIT_COUNT), forKey: "count")
                 return .requestParameters(parameters: params, encoding: encoding)
             case .requestPlain:
                 var params = [String: String]()
-                params.updateValue(TMDB_API_KEY, forKey: "api_key")
-                params.updateValue(XUtils.getCurrentLanguage(), forKey: "language")
-//                params.updateValue(XUtils.getCurrentRegion(), forKey: "region")
+                params.updateValue(String(LIMIT_COUNT), forKey: "count")
                 return .requestParameters(parameters: params, encoding: URLEncoding.default)
                 
             default:

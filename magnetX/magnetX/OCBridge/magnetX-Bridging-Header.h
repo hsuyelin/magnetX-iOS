@@ -8,3 +8,4 @@
 
 #import <CommonCrypto/CommonDigest.h>
 #import <MJRefresh/MJRefresh.h>
+#import <YYText/YYLabel.h>

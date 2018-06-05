@@ -8,7 +8,7 @@
 
 import UIKit
 import Foundation
-import RxNetwork
+import RxSwiftX
 import Moya
 
 class RecommendViewController: BaseViewController, Routable {

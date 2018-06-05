@@ -13,6 +13,7 @@ import RxCocoa
 import RxDataSources
 import CocoaChainKit
 import SkeletonView
+import RxSwiftX
 
 enum HotType: String {
     case nowPlaying
@@ -26,9 +27,9 @@ class HotChildViewController: BaseViewController {
     private var target: MoviesTarget {
         switch hotType {
         case .nowPlaying:
-            return MoviesTarget.getNowPlaying(pageIndex: pageIndex)
+            return MoviesTarget.getNowPlaying(startIndex: startIndex)
         case .upComing:
-            return MoviesTarget.getUpComing(pageIndex: pageIndex)
+            return MoviesTarget.getUpComing(startIndex: startIndex)
         }
     }
     
@@ -37,22 +38,22 @@ class HotChildViewController: BaseViewController {
         tableView.backgroundColor = UIColor.white
         tableView.separatorStyle = .none
         tableView.rowHeight = 125.rpx
-        tableView.register(CommonMovieCell.self, forCellReuseIdentifier: "CommonMovieCell")
+        tableView.register(HotMovieCell.self, forCellReuseIdentifier: "HotMovieCell")
         tableView.mj_header = MJRefreshNormalHeader()
         tableView.mj_footer = MJRefreshBackNormalFooter()
         return tableView
     }()
     
-    private lazy var dataSource: RxTableViewSectionedReloadDataSource<CommonMovieListModel> = {
-        RxTableViewSectionedReloadDataSource<CommonMovieListModel>(configureCell: { (_, tableView, indexPath, item) -> UITableViewCell in
-            let cell = tableView.dequeueReusableCell(withIdentifier: "CommonMovieCell", for: indexPath) as! CommonMovieCell
+    private lazy var dataSource: RxTableViewSectionedReloadDataSource<HotMovieListModel> = {
+        RxTableViewSectionedReloadDataSource<HotMovieListModel>(configureCell: { (_, tableView, indexPath, item) -> UITableViewCell in
+            let cell = tableView.dequeueReusableCell(withIdentifier: "HotMovieCell", for: indexPath) as! HotMovieCell
             cell.bindItem(item)
             return cell
         })
     }()
     
     private let disposeBag = DisposeBag()
-    private var pageIndex = 1
+    private var startIndex = 0
     
     // MARK: - life cycle
     convenience init(hotType: HotType) {
@@ -100,17 +101,17 @@ class HotChildViewController: BaseViewController {
     }
 
     private func bindViewModel() {
-        let viewModel = CommonMovieViewModel()
+        let viewModel = HotMovieViewModel()
         let refresh = tableView.mj_header.rx.refreshing.shareOnce()
         let more = tableView.mj_footer.rx.refreshing.shareOnce()
-        let input = CommonMovieViewModel.Input(refresh: refresh,
+        let input = HotMovieViewModel.Input(refresh: refresh,
                                                more: more,
                                                type: Observable.of(hotType))
         let output = viewModel.transform(input)
         output.items.drive(tableView.rx.items(dataSource: dataSource)).disposed(by: disposeBag)
 
-        output.items.map(to: ()).drive(tableView.mj_header.rx.endRefreshing).disposed(by: disposeBag)
-        output.items.map(to: ()).drive(tableView.mj_footer.rx.endRefreshing).disposed(by: disposeBag)
+        output.refreshState.map(to: ()).drive(tableView.mj_header.rx.endRefreshing).disposed(by: disposeBag)
+        output.moreState.map(to: ()).drive(tableView.mj_footer.rx.endRefreshing).disposed(by: disposeBag)
         
         output.refreshState.drive(HUD.rx.state).disposed(by: disposeBag)
         output.moreState.drive(HUD.rx.state).disposed(by: disposeBag)
@@ -124,7 +125,7 @@ class HotChildViewController: BaseViewController {
         .subscribe(onNext: { indexPath, model in
             print(model)
             print(XUtils.getCurrentRegion())
-            self.push(MovieDetailViewController.self, parameters: ["id": model.id, "posterURL": model.poster_path])
+            self.push(MovieDetailViewController.self, parameters: ["id": model.id, "posterURL": model.images.medium, "movieName": model.title])
         })
         .disposed(by: disposeBag)
     }

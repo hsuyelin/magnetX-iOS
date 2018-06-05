@@ -9,61 +9,56 @@
 import Foundation
 
 struct MovieDetailModel: Codable {
-    var adult: Bool
-    var backdrop_path: String
-    var belongs_to_collection: Array<belongToColletionModel>
-    var budget: String
-    var genres: Array<genresModel>
-    var homepage: String
+    var reviews_count: String
+    var wish_count: String
+    var douban_site: String
+    var year: String
+    var alt: String
     var id: String
-    var imdb_id: String
-    var original_language: String
-    var original_title: String
-    var overview: String
-    var popularity: String
-    var poster_path: String
-    var production_companies: Array<productionCompaniesModel>
-    var production_countries: Array<productionCountriesModel>
-    var release_date: String
-    var revenue: String
-    var runtime: String
-    var spoken_languages: Array<spokenLanguages>
-    var status: String
-    var tagline: String
+    var mobile_url: String
     var title: String
-    var video: String
-    var vote_average: String
-    var vote_count: String
+    var do_count: String
+    var share_url: String
+    var seasons_count: String
+    var schedule_url: String
+    var episodes_count: String
+    var collect_count: String
+    var current_season: String
+    var original_title: String
+    var summary: String
+    var subtype: String
+    var comments_count: String
+    var ratings_count: String
+    
+    var rating: RatingModel
+    var images: ImagesModel
+    var countries: [String]
+    var genres: [String]
+    var aka: [String]
+    var casts: [PersonalAttrModel]
+    var directors: [PersonalAttrModel]
+    
+    var yearAndGenres: String {
+        var year = ""
+        if self.year.isBlank == false {
+            year = self.year
+        }
+        
+        var genres = ""
+        if self.genres.count == 0 {
+            return year + genres
+        }
+        else {
+            let genresArr = self.genres.map { $0 }
+            genres = genresArr.joined(separator: " / ")
+            if self.year.isBlank {
+                return genres
+            }
+            else {
+                return year + " / " + genres
+            }
+        }
+    }
 }
-
-struct belongToColletionModel: Codable {
-    var id: String
-    var name: String
-    var poster_path: String
-    var backdrop_path: String
-}
-
-struct genresModel: Codable {
-    var id: String
-    var name: String
-}
-
-struct productionCompaniesModel: Codable {
-    var id: String
-    var name: String
-    var logo_path: String
-    var origin_country: String
-}
-
-struct productionCountriesModel: Codable {
-    var iso_3166_1: String
-    var name: String
-}
-
-struct spokenLanguages: Codable {
-    var iso_639_1: String
-    var name: String
-}
-
 
 

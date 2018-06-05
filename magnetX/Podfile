@@ -6,8 +6,11 @@ target 'magnetX' do
   
   pod 'RxSwift'
   pod 'RxCocoa'
-  pod 'RxNetwork'
   pod 'RxDataSources'
+  pod 'RxSwiftX'
+  pod 'RxSwiftX/DataSources'
+  pod 'RxSwiftX/Network'
+  pod 'RxSwiftX/MJRefresh'
   pod 'RxSwiftExt'
   pod 'Differentiator'
   pod 'Kingfisher'
@@ -17,12 +20,12 @@ target 'magnetX' do
   pod 'WCDB.swift'
   pod 'WKWebViewJavascriptBridge'
   pod 'IQKeyboardManagerSwift'
-  pod 'MJRefresh'
   pod 'Ono'
   pod 'LTScrollView'
   pod 'CocoaChainKit'
   pod 'SkeletonView'
   pod 'Toast-Swift'
   pod 'ColorThiefSwift'
-
+  pod 'YYText'
+  pod 'FDTemplateLayoutCell'
 end
